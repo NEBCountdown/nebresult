@@ -11,6 +11,9 @@
 </head>
 <body>
 
+    <div class="video-ambient-frame">
+        <div id="youtube-player"></div>
+    </div>
     <div class="space-grid"></div>
     <div class="nebula-cyan"></div>
     <div class="nebula-purple"></div>
@@ -21,6 +24,11 @@
                 <span class="radar-pulse"></span>
                 <span class="telemetry-text">SYSTEM LIVE // DATA SYNC SECURE</span>
             </div>
+            
+            <button id="audio-toggle" class="audio-ctrl-btn" aria-label="Toggle Audio">
+                <span class="audio-icon">🔇</span> MUSIC OFF
+            </button>
+
             <div class="live-clock-terminal">
                 <div class="calendar-badge greg">
                     <span class="label">AD</span> <span id="current-date-greg">June 14, 2026</span>
@@ -28,7 +36,7 @@
                 <div class="calendar-badge nep">
                     <span class="label">BS</span> <span id="current-date-nep">31 Jestha 2083</span>
                 </div>
-                <div id="digital-clock" class="clock-display">19:13:35</div>
+                <div id="digital-clock" class="clock-display">00:00:00</div>
             </div>
         </header>
 
@@ -85,7 +93,7 @@
 
             <div class="trajectory-panel">
                 <div class="panel-header">
-                    <span class="panel-title"> NEB RESULT COUNTDOWN</span>
+                    <span class="panel-title">CLASS 12 NEB RESULT 2083</span>
                     <span id="progress-percentage" class="percentage-readout">0.0000%</span>
                 </div>
                 <div class="track-container">
@@ -105,9 +113,7 @@
 
             <section class="gateway-action-container">
                 <div class="gateway-card">
-                    <div class="gateway-glitch-overlay"></div>
                     <a href="https://neb.ntc.net.np" target="_blank" rel="noopener noreferrer" class="portal-btn">
-                        <span class="btn-glow-layer"></span>
                         <span class="btn-content">
                             <span class="icon-pulse">⚡</span> CHECK YOUR RESULT <span class="icon-pulse">⚡</span>
                         </span>
@@ -142,7 +148,7 @@
         </main>
 
         <footer class="system-footer">
-            <p>NEB Aalternative Platform &copy; 2026 // Distributed Offline-First Network Profile
+            <p>NEB ALTERNATIVE Platform &copy; 2026 // Distributed Offline-First Network Profile
             © 2026 All Rights Reserved. This website and its content are protected under the Copyright Act of Nepal (2059 B.S.). Unauthorized copying, distribution, or use is prohibited.</p>
         </footer>
     </div>
