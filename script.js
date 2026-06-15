@@ -80,11 +80,13 @@ requestAnimationFrame(runQuantumCountdown);
 
 /**
  * =============================================================
- * TRIPLE-STREAM TRINITY AUDIO CONSOLE (TRIPLE YOUTUBE HANDLER)
+ * ANTI-AD TRINITY AUDIO CONSOLE (INDEPENDENT ON/OFF CONTROLS)
  * =============================================================
  */
 let playerAarti, playerBell, playerSankha;
 let isAartiMuted = true;
+let isBellMuted = true;
+let isSankhaMuted = true;
 
 const audioButton = document.getElementById("audio-toggle");
 const bellBtn     = document.getElementById("btn-bell");
@@ -97,28 +99,35 @@ const firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 /**
- * Orchestrate the configuration nodes for all three YouTube media timelines
+ * Orchestrate players using the Privacy Enhanced Domain to drastically shield against Ads
  */
 function onYouTubeIframeAPIReady() {
     // 1. Core Background Aarti Stream (Jai Saraswati Mata)
     playerAarti = new YT.Player('youtube-player-aarti', {
         videoId: 'TTVAyS9wOV4',
-        playerVars: { 'autoplay': 1, 'controls': 0, 'loop': 1, 'playlist': 'TTVAyS9wOV4', 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 1 },
+        host: 'https://www.youtube-nocookie.com', // Active ad shielding routing parameters
+        playerVars: { 
+            'autoplay': 1, 'controls': 0, 'loop': 1, 
+            'playlist': 'TTVAyS9wOV4', 'list': 'RDTTVAyS9wOV4',
+            'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 1 
+        },
         events: { 'onReady': (e) => e.target.playVideo() }
     });
 
     // 2. Interactive Temple Bell Sound FX Stream
     playerBell = new YT.Player('youtube-player-bell', {
         videoId: 'hw3vQ0_-Bgw',
-        playerVars: { 'autoplay': 0, 'controls': 0, 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 0 },
-        events: { 'onReady': (e) => e.target.setVolume(90) }
+        host: 'https://www.youtube-nocookie.com',
+        playerVars: { 'autoplay': 1, 'controls': 0, 'loop': 1, 'playlist': 'hw3vQ0_-Bgw', 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 1 },
+        events: { 'onReady': (e) => e.target.playVideo() }
     });
 
     // 3. Interactive Divine Sankha Sound FX Stream
     playerSankha = new YT.Player('youtube-player-sankha', {
         videoId: 'Hc-jD3wn5o4',
-        playerVars: { 'autoplay': 0, 'controls': 0, 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 0 },
-        events: { 'onReady': (e) => e.target.setVolume(100) }
+        host: 'https://www.youtube-nocookie.com',
+        playerVars: { 'autoplay': 1, 'controls': 0, 'loop': 1, 'playlist': 'Hc-jD3wn5o4', 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 1 },
+        events: { 'onReady': (e) => e.target.playVideo() }
     });
 
     // Smart Setup Engine: Unmutes background song automatically on the user's first natural screen interaction click
@@ -129,16 +138,17 @@ function onYouTubeIframeAPIReady() {
     }, { once: true });
 }
 
+/* --- Channel Volume Mute/Unmute Management State Blocks --- */
+
 function unmuteAartiTrack() {
     if (playerAarti && typeof playerAarti.unMute === 'function') {
         playerAarti.unMute();
-        playerAarti.setVolume(40); // Comfortable mix layout volume balance
+        playerAarti.setVolume(45);
         isAartiMuted = false;
         audioButton.innerHTML = `<span class="audio-icon">🔊</span> SARASWATI MATA: ON`;
         audioButton.classList.add("playing");
     }
 }
-
 function muteAartiTrack() {
     if (playerAarti && typeof playerAarti.mute === 'function') {
         playerAarti.mute();
@@ -148,26 +158,58 @@ function muteAartiTrack() {
     }
 }
 
+function unmuteBellTrack() {
+    if (playerBell && typeof playerBell.unMute === 'function') {
+        playerBell.unMute();
+        playerBell.setVolume(75);
+        isBellMuted = false;
+        bellBtn.innerHTML = `<span class="audio-icon">🔔</span> BELL: ON`;
+        bellBtn.classList.add("playing");
+    }
+}
+function muteBellTrack() {
+    if (playerBell && typeof playerBell.mute === 'function') {
+        playerBell.mute();
+        isBellMuted = true;
+        bellBtn.innerHTML = `<span class="audio-icon">🔕</span> BELL: OFF`;
+        bellBtn.classList.remove("playing");
+    }
+}
+
+function unmuteSankhaTrack() {
+    if (playerSankha && typeof playerSankha.unMute === 'function') {
+        playerSankha.unMute();
+        playerSankha.setVolume(90);
+        isSankhaMuted = false;
+        sankhaBtn.innerHTML = `<span class="audio-icon">🐚</span> SANKHA: ON`;
+        sankhaBtn.classList.add("playing");
+    }
+}
+function muteSankhaTrack() {
+    if (playerSankha && typeof playerSankha.mute === 'function') {
+        playerSankha.mute();
+        isSankhaMuted = true;
+        sankhaBtn.innerHTML = `<span class="audio-icon">🐚</span> SANKHA: OFF`;
+        sankhaBtn.classList.remove("playing");
+    }
+}
+
+/* --- Button Event Handlers for Independent Layer Controls --- */
+
 // 1. Main Background Aarti Channel Trigger
 audioButton.addEventListener("click", (e) => {
     e.stopPropagation();
     if (isAartiMuted) { unmuteAartiTrack(); } else { muteAartiTrack(); }
 });
 
-// 2. Overlapping Bell FX Trigger Handler
+// 2. Loop-Toggle Bell Trigger Handler
 bellBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    if (playerBell && typeof playerBell.seekTo === 'function') {
-        playerBell.seekTo(0); // Rewinds video back to the absolute beginning instantly
-        playerBell.playVideo();
-    }
+    if (isBellMuted) { unmuteBellTrack(); } else { muteBellTrack(); }
 });
 
-// 3. Overlapping Sankha FX Trigger Handler
+// 3. Loop-Toggle Sankha Trigger Handler
 sankhaBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    if (playerSankha && typeof playerSankha.seekTo === 'function') {
-        playerSankha.seekTo(0); // Forces playback to loop back to zero instantly
-        playerSankha.playVideo();
-    }
+    if (isSankhaMuted) { unmuteSankhaTrack(); } else { muteSankhaTrack(); }
 });
