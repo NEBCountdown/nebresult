@@ -80,7 +80,7 @@ requestAnimationFrame(runQuantumCountdown);
 
 /**
  * =============================================================
- * ANTI-AD TRINITY AUDIO CONSOLE (INDEPENDENT ON/OFF CONTROLS)
+ * ANTI-AD TRINITY AUDIO CONSOLE (UNIFIED DESIGN: ON / OFF SYSTEM)
  * =============================================================
  */
 let playerAarti, playerBell, playerSankha;
@@ -105,7 +105,7 @@ function onYouTubeIframeAPIReady() {
     // 1. Core Background Aarti Stream (Jai Saraswati Mata)
     playerAarti = new YT.Player('youtube-player-aarti', {
         videoId: 'TTVAyS9wOV4',
-        host: 'https://www.youtube-nocookie.com', // Active ad shielding routing parameters
+        host: 'https://www.youtube-nocookie.com', 
         playerVars: { 
             'autoplay': 1, 'controls': 0, 'loop': 1, 
             'playlist': 'TTVAyS9wOV4', 'list': 'RDTTVAyS9wOV4',
