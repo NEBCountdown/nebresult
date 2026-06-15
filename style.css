@@ -9,6 +9,7 @@
     --text-secondary: #8e9cae;
     --amber-alert: #ffb703;
     --rose-alert: #ff4d6d;
+    --neon-green: #00ff88;
 }
 
 /* --- Base Structural Setup --- */
@@ -380,115 +381,78 @@ body {
 .node-date { font-size: 0.85rem; font-weight: 700; color: var(--text-pure); }
 .node-label { font-size: 0.75rem; color: var(--text-secondary); }
 
-/* --- Advanced Embedded iFrame Portal Terminal Look --- */
+/* --- Re-Engineered Cinematic Redirect Terminal Layout --- */
 .gateway-action-container {
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
 
-.portal-embed-card {
+.portal-redirect-card {
     width: 100%;
-    max-width: 950px;
-    background: rgba(4, 10, 24, 0.85);
-    border: 1px solid var(--glass-border);
+    max-width: 900px;
+    background: rgba(6, 12, 28, 0.85);
+    border: 1px solid rgba(0, 242, 254, 0.25);
     border-radius: 16px;
-    padding: 15px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-}
-
-.portal-embed-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    margin-bottom: 15px;
-}
-
-.live-indicator {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #00ff88;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.pulse-dot {
-    width: 8px;
-    height: 8px;
-    background: #00ff88;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #00ff88;
-    animation: beacon 1.5s infinite;
-}
-
-.portal-url-tag {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2px 10px;
-    border-radius: 4px;
-}
-
-.iframe-view-wrapper {
-    width: 100%;
-    height: 480px; /* Generous interactive view pane box */
-    background: #000000;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-}
-
-.iframe-view-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: #ffffff; /* Simulates a crisp clean terminal document layer background */
-}
-
-.portal-embed-footer {
-    margin-top: 15px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 242, 254, 0.03);
     text-align: left;
 }
 
-.portal-embed-footer p {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    max-width: 500px;
-    line-height: 1.4;
+.redirect-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    margin-bottom: 20px;
 }
 
-.fallback-link-btn {
+.redirect-instruction {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.secure-launchpad-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
     text-decoration: none;
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--neon-cyan);
-    border: 1px solid rgba(0, 242, 254, 0.3);
-    padding: 8px 16px;
-    border-radius: 6px;
-    background: rgba(0, 242, 254, 0.03);
-    transition: all 0.2s ease;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #000000;
+    background: linear-gradient(90deg, #00f2fe, #00ff88);
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    letter-spacing: 1px;
 }
 
-.fallback-link-btn:hover {
-    background: var(--neon-cyan);
-    color: #000000;
-    box-shadow: 0 0 15px var(--neon-cyan);
-    transform: translateY(-2px);
+.secure-launchpad-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.45);
+    filter: brightness(1.1);
+}
+
+.secure-launchpad-btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-glow-arrow {
+    display: inline-block;
+    animation: pulseArrow 1s infinite alternate;
+}
+
+@keyframes pulseArrow {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    100% { transform: scale(1.2); opacity: 1; }
 }
 
 /* --- Forecast Prediction Timeline Matrix --- */
@@ -511,8 +475,72 @@ body {
 .celebration-box p { font-size: 1.3rem; margin-bottom: 25px; }
 .confetti-cannon { font-size: 3.5rem; margin-bottom: 10px; animation: float 1.2s infinite alternate ease-in-out; }
 .re-sync-btn { background: transparent; border: 1px solid #00ff88; color: #00ff88; font-family: 'Orbitron', sans-serif; padding: 10px 24px; font-weight: 700; border-radius: 6px; cursor: pointer; transition: all 0.2s; }
-.re-sync-btn:hover { background: #00ff88; color: #000; }
+.re-sync-btn:hover { background: #00ff88; color: #00; }
 .hidden { display: none !important; }
+
+/* --- Premium Real Visitor Counter Footprint Deck --- */
+.system-footer {
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-telemetry-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.network-profile-text {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.live-visitor-card {
+    background: rgba(4, 8, 20, 0.9);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    padding: 8px 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 255, 136, 0.03);
+}
+
+.visitor-ping {
+    width: 8px;
+    height: 8px;
+    background: var(--neon-green);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--neon-green);
+    animation: beacon 1.4s infinite ease-in-out;
+}
+
+.visitor-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
+.visitor-digits {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--neon-green);
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.visitor-unit {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.3);
+}
 
 /* --- Base System Animations --- */
 @keyframes beacon { 0%, 100% { transform: scale(0.9); opacity: 0.6; } 50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 16px var(--neon-cyan); } }
@@ -525,6 +553,7 @@ body {
     .ms-card { grid-column: span 2; }
     .matrix-grid { grid-template-columns: 1fr; gap: 15px; }
     .system-header { flex-direction: column; gap: 14px; text-align: center; }
+    .footer-telemetry-grid { flex-direction: column; text-align: center; justify-content: center; }
 }
 @media (max-width: 650px) {
     .main-title { font-size: 1.9rem; }
@@ -535,7 +564,6 @@ body {
     .target-matrix-card { flex-direction: column; gap: 15px; padding: 20px; }
     .divider-vertical { width: 60%; height: 1px; }
     .live-clock-terminal { flex-direction: column; gap: 8px; }
-    .iframe-view-wrapper { height: 350px; }
-    .portal-embed-footer { flex-direction: column; text-align: center; justify-content: center; }
+    .portal-redirect-card { padding: 20px; }
+    .secure-launchpad-btn { font-size: 0.9rem; padding: 14px; }
 }
-.system-footer { text-align: center; padding-top: 25px; color: var(--text-secondary); font-size: 0.8rem; letter-spacing: 1px; border-top: 1px solid rgba(255, 255, 255, 0.03); }
