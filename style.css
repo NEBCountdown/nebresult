@@ -31,28 +31,22 @@ body {
     align-items: center;
 }
 
-/* --- Background Layers & Video Stream Integration --- */
+/* --- Responsive Structural Streaming Elements --- */
 .video-ambient-frame {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -4;
-    overflow: hidden;
+    width: 12px;
+    height: 12px;
+    opacity: 0.01; /* Kept running physically at microscopic level to prevent mobile engine freezing */
+    z-index: -10;
     pointer-events: none;
-    opacity: 0.12;
+    overflow: hidden;
 }
 
-.video-ambient-frame iframe {
-    width: 100vw;
-    height: 56.25vw;
-    min-height: 100vh;
-    min-width: 177.77vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.mobile-safe-iframe {
+    width: 100%;
+    height: 100%;
 }
 
 .space-grid {
@@ -88,6 +82,73 @@ body {
     background: radial-gradient(circle, rgba(157, 78, 221, 0.1) 0%, transparent 70%);
     z-index: -2;
     pointer-events: none;
+}
+
+/* --- High-Visibility Screen Ignition Overlay Barrier --- */
+.ignition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #04060f;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.ignition-content {
+    text-align: center;
+    padding: 30px;
+    max-width: 440px;
+    width: 90%;
+}
+
+.ignition-radar {
+    width: 65px;
+    height: 65px;
+    border: 3px solid #00f2fe;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    animation: beacon 1.5s infinite ease-in-out;
+}
+
+.ignition-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.ignition-content p {
+    font-size: 0.95rem;
+    color: #8e9cae;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.ignition-btn {
+    background: linear-gradient(90deg, #00f2fe, #00ff88);
+    color: #000000;
+    border: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.45);
+    width: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.ignition-overlay.fade-out {
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* --- Container Layout Structure --- */
@@ -440,10 +501,6 @@ body {
     filter: brightness(1.1);
 }
 
-.secure-launchpad-btn:active {
-    transform: translateY(-1px);
-}
-
 /* --- Forecast Prediction Timeline Matrix --- */
 .section-header { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; letter-spacing: 3px; color: var(--text-secondary); margin-bottom: 20px; }
 .matrix-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -464,7 +521,7 @@ body {
 .celebration-box p { font-size: 1.3rem; margin-bottom: 25px; }
 .confetti-cannon { font-size: 3.5rem; margin-bottom: 10px; animation: float 1.2s infinite alternate ease-in-out; }
 .re-sync-btn { background: transparent; border: 1px solid #00ff88; color: #00ff88; font-family: 'Orbitron', sans-serif; padding: 10px 24px; font-weight: 700; border-radius: 6px; cursor: pointer; transition: all 0.2s; }
-.re-sync-btn:hover { background: #00ff88; color: #00; }
+.re-sync-btn:hover { background: #00ff88; color: #000000; }
 .hidden { display: none !important; }
 
 /* --- Premium Real Visitor Counter Custom Footprint Deck --- */
