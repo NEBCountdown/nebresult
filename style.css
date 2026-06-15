@@ -40,7 +40,7 @@ body {
     z-index: -4;
     overflow: hidden;
     pointer-events: none;
-    opacity: 0.12; /* Subtle background opacity for the Saraswati Aarti video */
+    opacity: 0.12;
 }
 
 .video-ambient-frame iframe {
