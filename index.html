@@ -12,8 +12,12 @@
 <body>
 
     <div class="video-ambient-frame">
-        <div id="youtube-player"></div>
+        <div id="youtube-player-aarti"></div>
+        
+        <div id="youtube-player-bell" style="display:none;"></div>
+        <div id="youtube-player-sankha" style="display:none;"></div>
     </div>
+    
     <div class="space-grid"></div>
     <div class="nebula-cyan"></div>
     <div class="nebula-purple"></div>
@@ -25,16 +29,24 @@
                 <span class="telemetry-text">SYSTEM LIVE // DATA SYNC SECURE</span>
             </div>
             
-            <button id="audio-toggle" class="audio-ctrl-btn" aria-label="Toggle Audio">
-                <span class="audio-icon">🔇</span> MUSIC OFF
-            </button>
+            <div class="audio-terminal-console">
+                <button id="audio-toggle" class="audio-ctrl-btn" aria-label="Toggle Saraswati Aarti">
+                    <span class="audio-icon">🔇</span> SARASWATI MATA: OFF
+                </button>
+                <button id="btn-bell" class="audio-ctrl-btn fx-btn" aria-label="Trigger Bell Sound">
+                    <span class="audio-icon">🔔</span> RING BELL
+                </button>
+                <button id="btn-sankha" class="audio-ctrl-btn fx-btn" aria-label="Trigger Sankha Sound">
+                    <span class="audio-icon">🐚</span> BLOW SANKHA
+                </button>
+            </div>
 
             <div class="live-clock-terminal">
                 <div class="calendar-badge greg">
-                    <span class="label">AD</span> <span id="current-date-greg">June 14, 2026</span>
+                    <span class="label">AD</span> <span id="current-date-greg">June 15, 2026</span>
                 </div>
                 <div class="calendar-badge nep">
-                    <span class="label">BS</span> <span id="current-date-nep">31 Jestha 2083</span>
+                    <span class="label">BS</span> <span id="current-date-nep">32 Jestha 2083</span>
                 </div>
                 <div id="digital-clock" class="clock-display">00:00:00</div>
             </div>
@@ -57,13 +69,13 @@
                 <div class="divider-vertical"></div>
                 <div class="matrix-item">
                     <span class="matrix-label">T-MINUS METRIC</span>
-                    <span id="days-remaining-badge" class="matrix-value text-white">10 DAYS AWAY</span>
+                    <span id="days-remaining-badge" class="matrix-value text-white">9 DAYS AWAY</span>
                 </div>
             </div>
 
             <div id="countdown-board" class="countdown-grid">
                 <div class="time-card">
-                    <span id="days" class="digit">10</span>
+                    <span id="days" class="digit">09</span>
                     <span class="unit">DAYS</span>
                 </div>
                 <div class="time-card">
@@ -93,7 +105,7 @@
 
             <div class="trajectory-panel">
                 <div class="panel-header">
-                    <span class="panel-title">CLASS 12 NEB RESULT 2083</span>
+                    <span class="panel-title">MISSION TRAJECTORY WINDOW</span>
                     <span id="progress-percentage" class="percentage-readout">0.0000%</span>
                 </div>
                 <div class="track-container">
@@ -123,7 +135,7 @@
             </section>
 
             <section class="forecast-matrix">
-                <h2 class="section-header">TIMELINE MATRIX</h2>
+                <h2 class="section-header">PREDICTION TIMELINE MATRIX</h2>
                 <div class="matrix-grid">
                     <div class="forecast-card border-amber">
                         <div class="card-tag tag-amber">EARLIEST EXPECTED</div>
@@ -148,8 +160,7 @@
         </main>
 
         <footer class="system-footer">
-            <p>NEB ALTERNATIVE Platform &copy; 2026 // Distributed Offline-First Network Profile
-            © 2026 All Rights Reserved. This website and its content are protected under the Copyright Act of Nepal (2059 B.S.). Unauthorized copying, distribution, or use is prohibited.</p>
+            <p>NEB Space-Launch Telemetry Platform &copy; 2026 // Distributed Offline-First Network Profile</p>
         </footer>
     </div>
 
