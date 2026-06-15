@@ -30,7 +30,7 @@ body {
     align-items: center;
 }
 
-/* --- Premium Background Layers & Video Stream Integration --- */
+/* --- Background Layers & Video Stream Integration --- */
 .video-ambient-frame {
     position: fixed;
     top: 0;
@@ -289,7 +289,7 @@ body {
     background: rgba(255,255,255,0.1);
 }
 
-/* --- High-Performance Tracking Grid Blocks --- */
+/* --- Tracking Grid Blocks --- */
 .countdown-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -342,7 +342,7 @@ body {
     backdrop-filter: blur(15px);
     padding: 20px;
     border-radius: 16px;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 }
 
 .panel-header {
@@ -380,65 +380,116 @@ body {
 .node-date { font-size: 0.85rem; font-weight: 700; color: var(--text-pure); }
 .node-label { font-size: 0.75rem; color: var(--text-secondary); }
 
-/* --- Glowing Quick-Access Portal Section --- */
+/* --- Advanced Embedded iFrame Portal Terminal Look --- */
 .gateway-action-container {
-    margin-bottom: 45px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
 
-.gateway-card {
+.portal-embed-card {
     width: 100%;
-    max-width: 650px;
-    background: linear-gradient(145deg, rgba(10, 20, 42, 0.8) 0%, rgba(5, 10, 25, 0.9) 100%);
-    border: 1px solid rgba(0, 242, 254, 0.3);
+    max-width: 950px;
+    background: rgba(4, 10, 24, 0.85);
+    border: 1px solid var(--glass-border);
     border-radius: 16px;
-    padding: 24px;
-    position: relative;
+    padding: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.gateway-card:hover {
-    border-color: var(--neon-cyan);
-    box-shadow: 0 20px 45px rgba(0, 242, 254, 0.15);
-}
-
-.portal-btn {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    background: linear-gradient(90deg, #00f2fe 0%, #4facfe 50%, #9d4edd 100%);
-    background-size: 200% auto;
-    border-radius: 10px;
-    padding: 18px;
-    color: #ffffff;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
-}
-
-.portal-btn:hover {
-    background-position: right center;
-    box-shadow: 0 0 35px rgba(0, 242, 254, 0.7);
-    transform: scale(1.015);
-}
-
-.btn-content {
+.portal-embed-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: 15px;
 }
 
-.icon-pulse { animation: iconFlash 1s infinite alternate; }
-.portal-footnote { margin-top: 12px; font-size: 0.85rem; font-weight: 600; color: var(--neon-cyan); letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; }
+.live-indicator {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #00ff88;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff88;
+    animation: beacon 1.5s infinite;
+}
+
+.portal-url-tag {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 10px;
+    border-radius: 4px;
+}
+
+.iframe-view-wrapper {
+    width: 100%;
+    height: 480px; /* Generous interactive view pane box */
+    background: #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.iframe-view-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #ffffff; /* Simulates a crisp clean terminal document layer background */
+}
+
+.portal-embed-footer {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: left;
+}
+
+.portal-embed-footer p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    line-height: 1.4;
+}
+
+.fallback-link-btn {
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: rgba(0, 242, 254, 0.03);
+    transition: all 0.2s ease;
+}
+
+.fallback-link-btn:hover {
+    background: var(--neon-cyan);
+    color: #000000;
+    box-shadow: 0 0 15px var(--neon-cyan);
+    transform: translateY(-2px);
+}
 
 /* --- Forecast Prediction Timeline Matrix --- */
 .section-header { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; letter-spacing: 3px; color: var(--text-secondary); margin-bottom: 20px; }
@@ -465,11 +516,10 @@ body {
 
 /* --- Base System Animations --- */
 @keyframes beacon { 0%, 100% { transform: scale(0.9); opacity: 0.6; } 50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 16px var(--neon-cyan); } }
-@keyframes iconFlash { 0% { opacity: 0.3; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1.1); } }
 @keyframes acquire { 0% { transform: scale(0.92); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 @keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(-12px); } }
 
-/* --- Adaptive Grid Responsiveness --- */
+/* --- Grid Responsiveness --- */
 @media (max-width: 950px) {
     .countdown-grid { grid-template-columns: repeat(3, 1fr); }
     .ms-card { grid-column: span 2; }
@@ -485,6 +535,7 @@ body {
     .target-matrix-card { flex-direction: column; gap: 15px; padding: 20px; }
     .divider-vertical { width: 60%; height: 1px; }
     .live-clock-terminal { flex-direction: column; gap: 8px; }
-    .portal-btn { font-size: 1.1rem; padding: 15px; }
+    .iframe-view-wrapper { height: 350px; }
+    .portal-embed-footer { flex-direction: column; text-align: center; justify-content: center; }
 }
 .system-footer { text-align: center; padding-top: 25px; color: var(--text-secondary); font-size: 0.8rem; letter-spacing: 1px; border-top: 1px solid rgba(255, 255, 255, 0.03); }
