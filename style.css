@@ -40,7 +40,7 @@ body {
     z-index: -4;
     overflow: hidden;
     pointer-events: none;
-    opacity: 0.12; /* Subdued low opacity so the video acts cleanly as a moving live background */
+    opacity: 0.12; /* Subtle background opacity for the Saraswati Aarti video */
 }
 
 .video-ambient-frame iframe {
@@ -100,7 +100,7 @@ body {
     justify-content: space-between;
 }
 
-/* --- Telemetry Header Module & Audio Control --- */
+/* --- Telemetry Header Module & Audio Console --- */
 .system-header {
     display: flex;
     justify-content: space-between;
@@ -111,6 +111,7 @@ body {
     border-radius: 12px;
     padding: 15px 25px;
     box-shadow: inset 0 0 15px rgba(0, 242, 254, 0.05);
+    gap: 20px;
 }
 
 .telemetry-status {
@@ -135,14 +136,23 @@ body {
     color: var(--neon-cyan);
 }
 
+/* --- Audio Console Deck Layout --- */
+.audio-terminal-console {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .audio-ctrl-btn {
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(0, 242, 254, 0.2);
+    border: 1px solid rgba(0, 242, 254, 0.18);
     color: var(--text-secondary);
     padding: 6px 14px;
     border-radius: 6px;
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
@@ -163,6 +173,19 @@ body {
     color: var(--neon-cyan);
     border-color: var(--neon-cyan);
     text-shadow: 0 0 5px var(--neon-cyan);
+    background: rgba(0, 242, 254, 0.05);
+}
+
+.fx-btn {
+    border-color: rgba(157, 78, 221, 0.25);
+}
+.fx-btn:hover {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 10px rgba(157, 78, 221, 0.3);
+    background: rgba(157, 78, 221, 0.05);
+}
+.fx-btn:active {
+    transform: scale(0.95);
 }
 
 .live-clock-terminal {
@@ -451,6 +474,7 @@ body {
     .countdown-grid { grid-template-columns: repeat(3, 1fr); }
     .ms-card { grid-column: span 2; }
     .matrix-grid { grid-template-columns: 1fr; gap: 15px; }
+    .system-header { flex-direction: column; gap: 14px; text-align: center; }
 }
 @media (max-width: 650px) {
     .main-title { font-size: 1.9rem; }
@@ -460,7 +484,6 @@ body {
     .digit { font-size: 2.8rem; }
     .target-matrix-card { flex-direction: column; gap: 15px; padding: 20px; }
     .divider-vertical { width: 60%; height: 1px; }
-    .system-header { flex-direction: column; gap: 12px; text-align: center; }
     .live-clock-terminal { flex-direction: column; gap: 8px; }
     .portal-btn { font-size: 1.1rem; padding: 15px; }
 }
