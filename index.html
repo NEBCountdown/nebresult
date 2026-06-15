@@ -123,13 +123,25 @@
             </div>
 
             <section class="gateway-action-container">
-                <div class="gateway-card">
-                    <a href="https://neb.ntc.net.np" target="_blank" rel="noopener noreferrer" class="portal-btn">
-                        <span class="btn-content">
-                            <span class="icon-pulse">⚡</span> CHECK YOUR RESULT <span class="icon-pulse">⚡</span>
-                        </span>
-                    </a>
-                    <p class="portal-footnote">Official NEB Result Portal</p>
+                <div class="portal-embed-card">
+                    <div class="portal-embed-header">
+                        <span class="live-indicator"><span class="pulse-dot"></span> LIVE WEB CONSOLE INTERFACE</span>
+                        <span class="portal-url-tag">neb.ntc.net.np</span>
+                    </div>
+                    <div class="iframe-view-wrapper">
+                        <iframe 
+                            src="https://neb.ntc.net.np" 
+                            title="Official NEB Result Dashboard Portal Frame" 
+                            sandbox="allow-forms allow-scripts allow-same-origin"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="portal-embed-footer">
+                        <p>If the window appears blank, the official server is blocking direct embeds.</p>
+                        <a href="https://neb.ntc.net.np" target="_blank" rel="noopener noreferrer" class="fallback-link-btn">
+                            Launch External Gateway View ⚡
+                        </a>
+                    </div>
                 </div>
             </section>
 
