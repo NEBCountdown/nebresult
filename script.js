@@ -1,11 +1,13 @@
 /**
- * NEB SPACE-LAUNCH DATA PARAMETERS
+ * ==========================================
+ * NEB SPACE-LAUNCH SYSTEM CHRONOMETER ENGINE
+ * ==========================================
  */
+
 const TARGET_HORIZON = new Date("June 24, 2026 00:00:00").getTime();
 const START_HORIZON  = new Date("June 14, 2026 00:00:00").getTime();
 const WINDOW_DURATION = TARGET_HORIZON - START_HORIZON;
 
-// Cached Document Tree Elements
 const DOM = {
     days: document.getElementById("days"),
     hours: document.getElementById("hours"),
@@ -20,9 +22,6 @@ const DOM = {
     celebrationZone: document.getElementById("celebration-zone")
 };
 
-/**
- * High-performance processing ticking module using requestAnimationFrame loops
- */
 function runQuantumCountdown() {
     const timeNow = Date.now();
     const deltaRemaining = TARGET_HORIZON - timeNow;
@@ -74,68 +73,101 @@ function executeSystemTermination() {
     DOM.countdownBoard.classList.add("hidden"); DOM.celebrationZone.classList.remove("hidden");
 }
 
-// Initialize clock cycles
 setInterval(runSystemClock, 1000);
 runSystemClock();
 requestAnimationFrame(runQuantumCountdown);
 
-// --- ASYNCHRONOUS YOUTUBE STREAMING AUDIO MODULE ---
-let player;
-let isVideoMuted = true;
-const audioButton = document.getElementById("audio-toggle");
 
-// Request streaming framework injection
+/**
+ * =============================================================
+ * TRIPLE-STREAM TRINITY AUDIO CONSOLE (TRIPLE YOUTUBE HANDLER)
+ * =============================================================
+ */
+let playerAarti, playerBell, playerSankha;
+let isAartiMuted = true;
+
+const audioButton = document.getElementById("audio-toggle");
+const bellBtn     = document.getElementById("btn-bell");
+const sankhaBtn   = document.getElementById("btn-sankha");
+
+// Mount the YouTube API Framework Asynchronously 
 const tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 const firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+/**
+ * Orchestrate the configuration nodes for all three YouTube media timelines
+ */
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtube-player', {
+    // 1. Core Background Aarti Stream (Jai Saraswati Mata)
+    playerAarti = new YT.Player('youtube-player-aarti', {
         videoId: 'TTVAyS9wOV4',
-        playerVars: {
-            'autoplay': 1,
-            'controls': 0,
-            'loop': 1,
-            'playlist': 'TTVAyS9wOV4',
-            'modestbranding': 1,
-            'rel': 0,
-            'showinfo': 0,
-            'mute': 1
-        },
-        events: { 'onReady': onPlayerReady }
+        playerVars: { 'autoplay': 1, 'controls': 0, 'loop': 1, 'playlist': 'TTVAyS9wOV4', 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 1 },
+        events: { 'onReady': (e) => e.target.playVideo() }
     });
-}
 
-function onPlayerReady(event) {
-    event.target.playVideo();
-    
-    // Auto-Activation: Detects user interaction anywhere to trigger play state seamlessly
-    document.addEventListener("click", () => {
-        if (isVideoMuted) { unmutePortalAudio(); }
+    // 2. Interactive Temple Bell Sound FX Stream
+    playerBell = new YT.Player('youtube-player-bell', {
+        videoId: 'hw3vQ0_-Bgw',
+        playerVars: { 'autoplay': 0, 'controls': 0, 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 0 },
+        events: { 'onReady': (e) => e.target.setVolume(90) }
+    });
+
+    // 3. Interactive Divine Sankha Sound FX Stream
+    playerSankha = new YT.Player('youtube-player-sankha', {
+        videoId: 'Hc-jD3wn5o4',
+        playerVars: { 'autoplay': 0, 'controls': 0, 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 0 },
+        events: { 'onReady': (e) => e.target.setVolume(100) }
+    });
+
+    // Smart Setup Engine: Unmutes background song automatically on the user's first natural screen interaction click
+    document.body.addEventListener("click", () => {
+        if (isAartiMuted) { 
+            unmuteAartiTrack(); 
+        }
     }, { once: true });
 }
 
-function unmutePortalAudio() {
-    if (player && typeof player.unMute === 'function') {
-        player.unMute();
-        player.setVolume(35);
-        isVideoMuted = false;
-        audioButton.innerHTML = `<span class="audio-icon">🔊</span> MUSIC ON`;
+function unmuteAartiTrack() {
+    if (playerAarti && typeof playerAarti.unMute === 'function') {
+        playerAarti.unMute();
+        playerAarti.setVolume(40); // Comfortable mix layout volume balance
+        isAartiMuted = false;
+        audioButton.innerHTML = `<span class="audio-icon">🔊</span> SARASWATI MATA: ON`;
         audioButton.classList.add("playing");
     }
 }
 
-function mutePortalAudio() {
-    if (player && typeof player.mute === 'function') {
-        player.mute();
-        isVideoMuted = true;
-        audioButton.innerHTML = `<span class="audio-icon">🔇</span> MUSIC OFF`;
+function muteAartiTrack() {
+    if (playerAarti && typeof playerAarti.mute === 'function') {
+        playerAarti.mute();
+        isAartiMuted = true;
+        audioButton.innerHTML = `<span class="audio-icon">🔇</span> SARASWATI MATA: OFF`;
         audioButton.classList.remove("playing");
     }
 }
 
+// 1. Main Background Aarti Channel Trigger
 audioButton.addEventListener("click", (e) => {
     e.stopPropagation();
-    if (isVideoMuted) { unmutePortalAudio(); } else { mutePortalAudio(); }
+    if (isAartiMuted) { unmuteAartiTrack(); } else { muteAartiTrack(); }
+});
+
+// 2. Overlapping Bell FX Trigger Handler
+bellBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (playerBell && typeof playerBell.seekTo === 'function') {
+        playerBell.seekTo(0); // Rewinds video back to the absolute beginning instantly
+        playerBell.playVideo();
+    }
+});
+
+// 3. Overlapping Sankha FX Trigger Handler
+sankhaBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (playerSankha && typeof playerSankha.seekTo === 'function') {
+        playerSankha.seekTo(0); // Forces playback to loop back to zero instantly
+        playerSankha.playVideo();
+    }
 });
