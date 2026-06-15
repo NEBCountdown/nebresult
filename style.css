@@ -31,15 +31,18 @@ body {
     align-items: center;
 }
 
-/* --- Responsive Structural Streaming Elements --- */
+/* --- High-Performance Video Layer Adaptive Setup --- */
 .video-ambient-frame {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 12px;
-    height: 12px;
-    opacity: 0.01; /* Kept running physically at microscopic level to prevent mobile engine freezing */
-    z-index: -10;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw; 
+    min-height: 100vh;
+    min-width: 177.77vh; 
+    transform: translate(-50%, -50%);
+    opacity: 0.25; 
+    z-index: -5; 
     pointer-events: none;
     overflow: hidden;
 }
