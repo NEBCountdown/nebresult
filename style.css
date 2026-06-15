@@ -381,7 +381,7 @@ body {
 .node-date { font-size: 0.85rem; font-weight: 700; color: var(--text-pure); }
 .node-label { font-size: 0.75rem; color: var(--text-secondary); }
 
-/* --- Re-Engineered Cinematic Redirect Terminal Layout --- */
+/* --- Premium Redirect Launchpad Deck Layout --- */
 .gateway-action-container {
     margin-bottom: 50px;
     display: flex;
@@ -420,8 +420,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    width: 100%;
     text-decoration: none;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.1rem;
@@ -433,6 +431,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
     transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .secure-launchpad-btn:hover {
@@ -443,16 +442,6 @@ body {
 
 .secure-launchpad-btn:active {
     transform: translateY(-1px);
-}
-
-.btn-glow-arrow {
-    display: inline-block;
-    animation: pulseArrow 1s infinite alternate;
-}
-
-@keyframes pulseArrow {
-    0% { transform: scale(0.9); opacity: 0.7; }
-    100% { transform: scale(1.2); opacity: 1; }
 }
 
 /* --- Forecast Prediction Timeline Matrix --- */
@@ -478,7 +467,7 @@ body {
 .re-sync-btn:hover { background: #00ff88; color: #00; }
 .hidden { display: none !important; }
 
-/* --- Premium Real Visitor Counter Footprint Deck --- */
+/* --- Premium Real Visitor Counter Custom Footprint Deck --- */
 .system-footer {
     text-align: center;
     padding-top: 25px;
