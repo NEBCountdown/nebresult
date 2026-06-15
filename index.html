@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>NEB Grade 12 Result 2026 Countdown</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,14 +12,23 @@
 <body>
 
     <div class="video-ambient-frame">
-        <div id="youtube-player-aarti"></div>
-        <div id="youtube-player-bell" style="display:none;"></div>
-        <div id="youtube-player-sankha" style="display:none;"></div>
+        <div id="youtube-player-aarti" class="mobile-safe-iframe"></div>
+        <div id="youtube-player-bell" class="mobile-safe-iframe"></div>
+        <div id="youtube-player-sankha" class="mobile-safe-iframe"></div>
     </div>
     
     <div class="space-grid"></div>
     <div class="nebula-cyan"></div>
     <div class="nebula-purple"></div>
+
+    <div id="mobile-ignition-overlay" class="ignition-overlay">
+        <div class="ignition-content">
+            <div class="ignition-radar"></div>
+            <h2>INITIALIZE TRANSMISSION</h2>
+            <p>Syncing telemetry arrays, cross-device media modules, and live traffic metrics.</p>
+            <button class="ignition-btn">CONNECT PORTAL ⚡</button>
+        </div>
+    </div>
 
     <div class="app-container">
         <header class="system-header">
