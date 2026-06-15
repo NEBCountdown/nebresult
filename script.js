@@ -92,29 +92,19 @@ const audioButton = document.getElementById("audio-toggle");
 const bellBtn     = document.getElementById("btn-bell");
 const sankhaBtn   = document.getElementById("btn-sankha");
 
-// Mount the YouTube API Framework Asynchronously 
 const tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 const firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-/**
- * Orchestrate players using the Privacy Enhanced Domain to drastically shield against Ads
- */
 function onYouTubeIframeAPIReady() {
-    // 1. Core Background Aarti Stream (Jai Saraswati Mata)
     playerAarti = new YT.Player('youtube-player-aarti', {
         videoId: 'TTVAyS9wOV4',
         host: 'https://www.youtube-nocookie.com', 
-        playerVars: { 
-            'autoplay': 1, 'controls': 0, 'loop': 1, 
-            'playlist': 'TTVAyS9wOV4', 'list': 'RDTTVAyS9wOV4',
-            'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 1 
-        },
+        playerVars: { 'autoplay': 1, 'controls': 0, 'loop': 1, 'playlist': 'TTVAyS9wOV4', 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 1 },
         events: { 'onReady': (e) => e.target.playVideo() }
     });
 
-    // 2. Interactive Temple Bell Sound FX Stream
     playerBell = new YT.Player('youtube-player-bell', {
         videoId: 'hw3vQ0_-Bgw',
         host: 'https://www.youtube-nocookie.com',
@@ -122,7 +112,6 @@ function onYouTubeIframeAPIReady() {
         events: { 'onReady': (e) => e.target.playVideo() }
     });
 
-    // 3. Interactive Divine Sankha Sound FX Stream
     playerSankha = new YT.Player('youtube-player-sankha', {
         videoId: 'Hc-jD3wn5o4',
         host: 'https://www.youtube-nocookie.com',
@@ -130,29 +119,21 @@ function onYouTubeIframeAPIReady() {
         events: { 'onReady': (e) => e.target.playVideo() }
     });
 
-    // Smart Setup Engine: Unmutes background song automatically on the user's first natural screen interaction click
     document.body.addEventListener("click", () => {
-        if (isAartiMuted) { 
-            unmuteAartiTrack(); 
-        }
+        if (isAartiMuted) { unmuteAartiTrack(); }
     }, { once: true });
 }
 
-/* --- Channel Volume Mute/Unmute Management State Blocks --- */
-
 function unmuteAartiTrack() {
     if (playerAarti && typeof playerAarti.unMute === 'function') {
-        playerAarti.unMute();
-        playerAarti.setVolume(45);
-        isAartiMuted = false;
+        playerAarti.unMute(); playerAarti.setVolume(45); isAartiMuted = false;
         audioButton.innerHTML = `<span class="audio-icon">🔊</span> SARASWATI MATA: ON`;
         audioButton.classList.add("playing");
     }
 }
 function muteAartiTrack() {
     if (playerAarti && typeof playerAarti.mute === 'function') {
-        playerAarti.mute();
-        isAartiMuted = true;
+        playerAarti.mute(); isAartiMuted = true;
         audioButton.innerHTML = `<span class="audio-icon">🔇</span> SARASWATI MATA: OFF`;
         audioButton.classList.remove("playing");
     }
@@ -160,17 +141,14 @@ function muteAartiTrack() {
 
 function unmuteBellTrack() {
     if (playerBell && typeof playerBell.unMute === 'function') {
-        playerBell.unMute();
-        playerBell.setVolume(75);
-        isBellMuted = false;
+        playerBell.unMute(); playerBell.setVolume(75); isBellMuted = false;
         bellBtn.innerHTML = `<span class="audio-icon">🔔</span> BELL: ON`;
         bellBtn.classList.add("playing");
     }
 }
 function muteBellTrack() {
     if (playerBell && typeof playerBell.mute === 'function') {
-        playerBell.mute();
-        isBellMuted = true;
+        playerBell.mute(); isBellMuted = true;
         bellBtn.innerHTML = `<span class="audio-icon">🔕</span> BELL: OFF`;
         bellBtn.classList.remove("playing");
     }
@@ -178,38 +156,56 @@ function muteBellTrack() {
 
 function unmuteSankhaTrack() {
     if (playerSankha && typeof playerSankha.unMute === 'function') {
-        playerSankha.unMute();
-        playerSankha.setVolume(90);
-        isSankhaMuted = false;
+        playerSankha.unMute(); playerSankha.setVolume(90); isSankhaMuted = false;
         sankhaBtn.innerHTML = `<span class="audio-icon">🐚</span> SANKHA: ON`;
         sankhaBtn.classList.add("playing");
     }
 }
 function muteSankhaTrack() {
     if (playerSankha && typeof playerSankha.mute === 'function') {
-        playerSankha.mute();
-        isSankhaMuted = true;
+        playerSankha.mute(); isSankhaMuted = true;
         sankhaBtn.innerHTML = `<span class="audio-icon">🐚</span> SANKHA: OFF`;
         sankhaBtn.classList.remove("playing");
     }
 }
 
-/* --- Button Event Handlers for Independent Layer Controls --- */
+audioButton.addEventListener("click", (e) => { e.stopPropagation(); if (isAartiMuted) { unmuteAartiTrack(); } else { muteAartiTrack(); } });
+bellBtn.addEventListener("click", (e) => { e.stopPropagation(); if (isBellMuted) { unmuteBellTrack(); } else { muteBellTrack(); } });
+sankhaBtn.addEventListener("click", (e) => { e.stopPropagation(); if (isSankhaMuted) { unmuteSankhaTrack(); } else { muteSankhaTrack(); } });
 
-// 1. Main Background Aarti Channel Trigger
-audioButton.addEventListener("click", (e) => {
-    e.stopPropagation();
-    if (isAartiMuted) { unmuteAartiTrack(); } else { muteAartiTrack(); }
-});
 
-// 2. Loop-Toggle Bell Trigger Handler
-bellBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    if (isBellMuted) { unmuteBellTrack(); } else { muteBellTrack(); }
-});
+/**
+ * =========================================================================
+ * REAL TIME TELEMETRY TRAFFIC COUNTER (HYLIA HIGH-VOLUME ARCHITECTURE)
+ * =========================================================================
+ */
+function monitorRealTimeTraffic() {
+    // Unique data room parameters assigned to prevent collision logs
+    const nameSpaceKey = "aavash_neb_countdown_2026_ledger";
+    const hyliaEndpoint = `https://count.getloli.com/get/@${nameSpaceKey}`;
 
-// 3. Loop-Toggle Sankha Trigger Handler
-sankhaBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    if (isSankhaMuted) { unmuteSankhaTrack(); } else { muteSankhaTrack(); }
-});
+    // Read and atomically push the live hit metric onto your footer module
+    fetch(hyliaEndpoint)
+        .then(res => {
+            if (!res.ok) throw new Error("Telemetry channel link error");
+            return res.json();
+        })
+        .then(data => {
+            const displayField = document.getElementById("visitor-count");
+            if (displayField && data && typeof data.value !== "undefined") {
+                // Renders the real hit record complete with commas formatting
+                displayField.textContent = data.value.toLocaleString();
+            }
+        })
+        .catch(err => {
+            console.warn("Traffic telemetry error:", err);
+            const displayField = document.getElementById("visitor-count");
+            if (displayField) {
+                displayField.textContent = "ONLINE";
+                displayField.style.color = "#00f2fe"; 
+            }
+        });
+}
+
+// Instantiate traffic logging loop on page load
+monitorRealTimeTraffic();
