@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>NEB Grade 12 Result 2026 Countdown</title>
+    <title>NEB & SEE Academic Command Console</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,26 +25,55 @@
         <div class="ignition-content">
             <div class="ignition-radar"></div>
             <h2>INITIALIZE TRANSMISSION</h2>
-            <p>Syncing telemetry arrays, cross-device media modules, and live traffic metrics.</p>
+            <p>Syncing triple-matrix telemetry arrays, cross-device media nodes, and live traffic metrics.</p>
             <button class="ignition-btn">CONNECT PORTAL ⚡</button>
         </div>
     </div>
 
+    <div id="nav-drawer" class="nav-sidebar">
+        <div class="drawer-header">
+            <span class="drawer-logo">MISSION SELECT</span>
+            <button id="close-drawer-btn" class="drawer-close">&times;</button>
+        </div>
+        <nav class="drawer-menu">
+            <button class="menu-item active" data-target="neb-result">
+                <span class="menu-icon">📊</span> NEB RESULT 2083 COUNTDOWN
+            </button>
+            <button class="menu-item" data-target="see-exam">
+                <span class="menu-icon">📝</span> SEE EXAM 2083 COUNTDOWN
+            </button>
+            <button class="menu-item" data-target="neb-exam">
+                <span class="menu-icon">🚀</span> NEB EXAM 2084 COUNTDOWN
+            </button>
+        </nav>
+        <div class="drawer-footer">
+            <span>CORE TELEMETRY STATUS: NOMINAL</span>
+        </div>
+    </div>
+    <div id="drawer-overlay" class="sidebar-overlay-backing"></div>
+
     <div class="app-container">
         <header class="system-header">
-            <div class="telemetry-status">
-                <span class="radar-pulse"></span>
-                <span class="telemetry-text">SYSTEM LIVE // DATA PORTAL READY</span>
+            <div class="left-header-block">
+                <button id="hamburger-menu-btn" class="hamburger-trigger" aria-label="Open Navigation Matrix">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="telemetry-status">
+                    <span class="radar-pulse"></span>
+                    <span id="active-system-tag" class="telemetry-text">SYSTEM: NEB RESULT MODULE</span>
+                </div>
             </div>
             
             <div class="audio-terminal-console">
-                <button id="audio-toggle" class="audio-ctrl-btn" aria-label="Toggle Saraswati Aarti">
+                <button id="audio-toggle" class="audio-ctrl-btn">
                     <span class="audio-icon">🔇</span> SARASWATI MATA: OFF
                 </button>
-                <button id="btn-bell" class="audio-ctrl-btn fx-btn" aria-label="Toggle Bell Sound">
+                <button id="btn-bell" class="audio-ctrl-btn fx-btn">
                     <span class="audio-icon">🔕</span> BELL: OFF
                 </button>
-                <button id="btn-sankha" class="audio-ctrl-btn fx-btn" aria-label="Toggle Sankha Sound">
+                <button id="btn-sankha" class="audio-ctrl-btn fx-btn">
                     <span class="audio-icon">🐚</span> SANKHA: OFF
                 </button>
             </div>
@@ -54,25 +83,25 @@
                     <span class="label">AD</span> <span id="current-date-greg">June 15, 2026</span>
                 </div>
                 <div class="calendar-badge nep">
-                    <span class="label">BS</span> <span id="current-date-nep">32 Jestha 2083</span>
+                    <span class="label">BS</span> <span id="current-date-nep">1 Ashar 2083</span>
                 </div>
                 <div id="digital-clock" class="clock-display">00:00:00</div>
             </div>
         </header>
 
         <main class="dashboard">
-            <h1 class="main-title">NEB Grade 12 Result 2026 Countdown</h1>
-            <p class="subtitle">Every second brings the result closer.</p>
+            <h1 id="dashboard-title" class="main-title">NEB Grade 12 Result 2026 Countdown</h1>
+            <p id="dashboard-subtitle" class="subtitle">Every second brings the result closer.</p>
 
             <div class="target-matrix-card">
                 <div class="matrix-item">
                     <span class="matrix-label">TARGET ARRIVAL (AD)</span>
-                    <span class="matrix-value text-cyan">June 24, 2026</span>
+                    <span id="meta-ad" class="matrix-value text-cyan">June 24, 2026</span>
                 </div>
                 <div class="divider-vertical"></div>
                 <div class="matrix-item">
                     <span class="matrix-label">TARGET ARRIVAL (BS)</span>
-                    <span class="matrix-value text-purple">10 Ashar 2083</span>
+                    <span id="meta-bs" class="matrix-value text-purple">10 Ashar 2083</span>
                 </div>
                 <div class="divider-vertical"></div>
                 <div class="matrix-item">
@@ -83,7 +112,7 @@
 
             <div id="countdown-board" class="countdown-grid">
                 <div class="time-card">
-                    <span id="days" class="digit">09</span>
+                    <span id="days" class="digit">00</span>
                     <span class="unit">DAYS</span>
                 </div>
                 <div class="time-card">
@@ -106,8 +135,8 @@
 
             <div id="celebration-zone" class="celebration-box hidden">
                 <div class="confetti-cannon">✨ 🚀 ✨</div>
-                <h2>The waiting is over.</h2>
-                <p>Check your result now!</p>
+                <h2 id="celebration-title">The waiting is over.</h2>
+                <p id="celebration-desc">Check your parameters now!</p>
                 <button class="re-sync-btn" onclick="window.location.reload()">Re-Verify Feed</button>
             </div>
 
@@ -121,61 +150,43 @@
                 </div>
                 <div class="track-footer">
                     <div class="footer-node">
-                        <span class="node-date">June 14, 2026</span>
-                        <span class="node-label">31 Jestha 2083 (START)</span>
+                        <span id="trajectory-start-date" class="node-date">June 14, 2026</span>
+                        <span id="trajectory-start-label" class="node-label">31 Jestha 2083 (START)</span>
                     </div>
                     <div class="footer-node text-right">
-                        <span class="node-date">June 24, 2026</span>
-                        <span class="node-label">10 Ashar 2083 (TARGET)</span>
+                        <span id="trajectory-target-date" class="node-date">June 24, 2026</span>
+                        <span id="trajectory-target-label" class="node-label">10 Ashar 2083 (TARGET)</span>
                     </div>
                 </div>
             </div>
 
-            <section class="gateway-action-container">
+            <section id="gateway-routing-module" class="gateway-action-container">
                 <div class="portal-redirect-card">
                     <div class="redirect-header">
                         <span class="live-indicator"><span class="pulse-dot"></span> BROADCAST GATEWAY SECURE</span>
-                        <span class="portal-url-tag">neb.ntc.net.np</span>
+                        <span id="portal-url-tag" class="portal-url-tag">neb.ntc.net.np</span>
                     </div>
                     <div class="redirect-body">
-                        <p class="redirect-instruction">
+                        <p id="redirect-instruction-text" class="redirect-instruction">
                             Official board servers protect result modules using strict isolation protocols. To view metrics, verify symbol sheets, and securely process grade ledgers, establish a clean line by routing directly through the external portal interface node.
                         </p>
-                        <a href="https://neb.ntc.net.np" target="_blank" rel="noopener noreferrer" class="secure-launchpad-btn">
+                        <a id="secure-launch-anchor" href="https://neb.ntc.net.np" target="_blank" rel="noopener noreferrer" class="secure-launchpad-btn">
                             Launch External Gateway View ⚡
                         </a>
                     </div>
                 </div>
             </section>
 
-            <section class="forecast-matrix">
-                <h2 class="section-header">PREDICTION TIMELINE MATRIX</h2>
-                <div class="matrix-grid">
-                    <div class="forecast-card border-amber">
-                        <div class="card-tag tag-amber">EARLIEST EXPECTED</div>
-                        <h3 class="date-ad">June 22, 2026</h3>
-                        <p class="date-bs">8 Ashar 2083</p>
-                        <span class="card-status-note">Early data processing trajectory</span>
+            <section id="forecast-matrix-zone" class="forecast-matrix">
+                <h2 id="matrix-section-header" class="section-header">PREDICTION TIMELINE MATRIX</h2>
+                <div id="matrix-cards-wrapper" class="matrix-grid">
                     </div>
-                    <div class="forecast-card border-cyan active-track">
-                        <div class="card-tag tag-cyan">MOST LIKELY TARGET</div>
-                        <h3 class="date-ad">June 24, 2026</h3>
-                        <p class="date-bs">10 Ashar 2083</p>
-                        <span class="card-status-note">Standard calibration window</span>
-                    </div>
-                    <div class="forecast-card border-rose">
-                        <div class="card-tag tag-rose">LATEST EXPECTED</div>
-                        <h3 class="date-ad">June 28, 2026</h3>
-                        <p class="date-bs">14 Ashar 2083</p>
-                        <span class="card-status-note">Verification/Structural fallback delay</span>
-                    </div>
-                </div>
             </section>
         </main>
 
         <footer class="system-footer">
             <div class="footer-telemetry-grid">
-                <p class="network-profile-text">NEB Space-Launch Telemetry Platform &copy; 2026 // Distributed Network Profile</p>
+                <p class="network-profile-text">NEB Space-Launch Telemetry Platform © 2026 // Distributed Network Profile</p>
                 
                 <div class="live-visitor-card">
                     <span class="visitor-ping"></span>
