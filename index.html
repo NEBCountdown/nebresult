@@ -3,80 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aavash Regmi | Portfolio</title>
+    <title>Aavash Regmi | Cinematic Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="bg-glow glow-1"></div>
-    <div class="bg-glow glow-2"></div>
+    <div class="grid-overlay"></div>
+    <div class="glow-container">
+        <div class="ambient-glow glow-blue"></div>
+        <div class="ambient-glow glow-purple"></div>
+    </div>
 
-    <main class="main-container">
-        
+    <nav class="navbar">
+        <div class="nav-blur"></div>
+        <div class="nav-content">
+            <a href="#hero" class="logo">AR<span>.</span></a>
+            <div class="nav-links">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#experience" class="nav-item">Journey</a>
+            </div>
+            <button class="nav-portal-btn" id="nav-portal-trigger">Portal</button>
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+
         <section class="hero-section" id="hero">
+            <div class="hero-badge">Available for Collaborations</div>
             <h1 class="hero-title">Aavash Regmi</h1>
-            <p class="hero-subtitle">Student & Web Developer</p>
-            <p class="hero-description">
-                Building interactive web applications, performance simulators, and intelligent productivity trackers with clean, cinematic interfaces.
+            <p class="hero-subtitle">Student & Creative Web Developer</p>
+            <p class="hero-lead">
+                Fusing clean computer science principles with high-performance, cinematic visual design. Specialized in complex interactive systems, physics simulations, and advanced automation trackers.
             </p>
-            <button class="btn-primary" id="connect-portal-btn">Connect to Portal</button>
+            <div class="hero-cta-group">
+                <button class="btn-primary" id="hero-portal-trigger">Connect to Portal</button>
+                <a href="#projects" class="btn-secondary">View Showcase</a>
+            </div>
         </section>
 
         <section class="portal-section hidden" id="portal-section">
             <div class="portal-card">
-                <button class="close-btn" id="close-portal-btn">&times;</button>
+                <button class="portal-close-btn" id="portal-close-btn">&times;</button>
                 
-                <div class="auth-state" id="login-state">
-                    <h2 class="portal-title">Authenticate Identity</h2>
-                    <p class="portal-subtitle">Enter your credentials to access the secure portal.</p>
+                <div class="auth-view" id="view-login">
+                    <h2 class="portal-card-title">Authenticate Identity</h2>
+                    <p class="portal-card-subtitle">Access your personal hub within the secure mainframe.</p>
                     
-                    <form class="auth-form" onsubmit="event.preventDefault();">
-                        <div class="input-group">
-                            <label for="login-username">Username</label>
-                            <input type="text" id="login-username" placeholder="Enter username" required>
+                    <form class="portal-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <label for="login-user">Username</label>
+                            <input type="text" id="login-user" placeholder="e.g., aavash_dev" required>
                         </div>
-                        <div class="input-group">
-                            <label for="login-password">Password</label>
-                            <input type="password" id="login-password" placeholder="••••••••" required>
+                        <div class="form-group">
+                            <label for="login-pass">Security Key</label>
+                            <input type="password" id="login-pass" placeholder="••••••••" required>
                         </div>
-                        <button type="submit" class="btn-submit">Login</button>
+                        <button type="submit" class="portal-submit-btn">Initialize Connection</button>
                     </form>
                     
-                    <p class="auth-switch-text">
-                        New to the portal? <a href="#" id="to-signup-link">Create a new profile</a>
+                    <p class="portal-switch-notice">
+                        Identity unbonded? <span class="switch-link" id="link-to-signup">Create a new profile</span>
                     </p>
                 </div>
 
-                <div class="auth-state hidden" id="signup-state">
-                    <h2 class="portal-title">Create New Profile</h2>
-                    <p class="portal-subtitle">Register your identity to generate portal access.</p>
+                <div class="auth-view hidden" id="view-signup">
+                    <h2 class="portal-card-title">Create New Profile</h2>
+                    <p class="portal-card-subtitle">Establish a clean signature profile to allocate cloud credentials.</p>
                     
-                    <form class="auth-form" onsubmit="event.preventDefault();">
-                        <div class="input-group">
-                            <label for="signup-name">Full Name</label>
-                            <input type="text" id="signup-name" placeholder="Your name" required>
+                    <form class="portal-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <label for="reg-name">Full Signature Name</label>
+                            <input type="text" id="reg-name" placeholder="Aavash Regmi" required>
                         </div>
-                        <div class="input-group">
-                            <label for="signup-username">Choose Username</label>
-                            <input type="text" id="signup-username" placeholder="Username" required>
+                        <div class="form-group">
+                            <label for="reg-user">Allocate Username</label>
+                            <input type="text" id="reg-user" placeholder="Choose unique identifier" required>
                         </div>
-                        <div class="input-group">
-                            <label for="signup-password">Create Password</label>
-                            <input type="password" id="signup-password" placeholder="••••••••" required>
+                        <div class="form-group">
+                            <label for="reg-pass">Generate Password</label>
+                            <input type="password" id="reg-pass" placeholder="••••••••" required>
                         </div>
-                        <button type="submit" class="btn-submit">Sign Up</button>
+                        <button type="submit" class="portal-submit-btn signup-theme">Register Profile Space</button>
                     </form>
                     
-                    <p class="auth-switch-text">
-                        Already verified? <a href="#" id="to-login-link">Sign in to identity</a>
+                    <p class="portal-switch-notice">
+                        Profile verified? <span class="switch-link" id="link-to-login">Sign in to existing identity</span>
                     </p>
                 </div>
+            </div>
+        </section>
 
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <span class="metric-num">99.9%</span>
+                <span class="metric-label">UI Fluidity Rate</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-num">HTML5</span>
+                <span class="metric-label">Semantic Core</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-num">CSS3</span>
+                <span class="metric-label">Pure Core Animations</span>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <div class="section-header">
+                <span class="section-tag">Development Frameworks</span>
+                <h2 class="section-title">Functional System Architectures</h2>
+            </div>
+
+            <div class="projects-container">
+                <article class="project-card">
+                    <div class="project-glow"></div>
+                    <div class="project-meta">01 // ANALYTICS MODULE</div>
+                    <h3 class="project-title">Smart Productivity & Focus Tracker</h3>
+                    <p class="project-desc">
+                        An automated platform tracking working deep-work states, incorporating mathematical analytics, visual metrics, and clean data logging architectures.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span>JavaScript ES6</span><span>CSS Variables</span><span>Local Storage API</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-glow"></div>
+                    <div class="project-meta">02 // AERODYNAMICS APPARATUS</div>
+                    <h3 class="project-title">Aircraft Performance & Flight Envelope Simulator</h3>
+                    <p class="project-desc">
+                        A math-heavy engineering application computing dynamic atmospheric aerodynamic forces, stall curves, and thrust boundaries in real-time.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span>Python Algorithm Core</span><span>HTML5 Canvas</span><span>Physics Engines</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-glow"></div>
+                    <div class="project-meta">03 // GEOSPATIAL MAPPER</div>
+                    <h3 class="project-title">Interactive World Geography & Data Explorer</h3>
+                    <p class="project-desc">
+                        Asynchronous REST API mapper serving global data matrices, coordinate plotting algorithms, and live tracking interfaces seamlessly.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span>Asynchronous REST APIs</span><span>JSON Structures</span><span>SVG Vectors</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="about-grid">
+                <div class="about-main">
+                    <span class="section-tag">Core Persona</span>
+                    <h2 class="section-title">The Engineering & Creative Core</h2>
+                    <p class="about-text">
+                        Driven by academic curiosity, I map advanced software and modern designs. My workflow bridges logic and creative direction, ensuring web platforms perform robustly under stressful device conditions while maintaining an unforgettable visual signature.
+                    </p>
+                </div>
+                <div class="skills-panel">
+                    <h3 class="panel-heading">Core Competency Matrix</h3>
+                    <div class="skill-row"><span>Structural Code</span><span class="skill-value">HTML5 / Semantic CSS3</span></div>
+                    <div class="skill-row"><span>Dynamic Architecture</span><span class="skill-value">Vanilla JavaScript / DOM Matrix</span></div>
+                    <div class="skill-row"><span>Computational Logic</span><span class="skill-value">Python / Object-Oriented Frameworks</span></div>
+                    <div class="skill-row"><span>Interactive Layout Design</span><span class="skill-value">Responsive Vector Engine / Grid / Flex</span></div>
+                </div>
             </div>
         </section>
 
     </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Aavash Regmi. Built with production precision across all platform devices.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
