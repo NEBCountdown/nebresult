@@ -3,13 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>NEB & SEE Academic Command Console</title>
+    <title>Academic Command Matrix & Cloud Core</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div id="auth-gateway-overlay" class="auth-overlay">
+        <div class="auth-card">
+            <div class="auth-logo-brand">
+                <span class="brand-glitch">ACADEMIC CENTRAL</span>
+                <p id="auth-status-log" class="auth-log">SECURE PROTOCOL INITIALIZED...</p>
+            </div>
+
+            <div id="login-panel" class="auth-panel-view">
+                <h2>AUTHENTICATE CONSOLE</h2>
+                <form id="login-form" class="auth-form-node">
+                    <div class="input-glow-group">
+                        <label>STUDENT IDENTIFIER</label>
+                        <input type="text" id="login-username" required placeholder="Enter username...">
+                    </div>
+                    <div class="input-glow-group">
+                        <label>ACCESS SECURITY CODE</label>
+                        <input type="password" id="login-password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="auth-action-btn">INITIALIZE HANDSHAKE ⚡</button>
+                </form>
+                <p class="auth-switch-prompt">New user channel? <button id="switch-to-signup" class="switch-link">Create Matrix Profile</button></p>
+            </div>
+
+            <div id="signup-panel" class="auth-panel-view hidden">
+                <h2>CREATE STUDENT REGISTER</h2>
+                <form id="signup-form" class="auth-form-node">
+                    <div class="input-glow-group">
+                        <label>CHOOSE USERNAME</label>
+                        <input type="text" id="signup-username" required placeholder="e.g., Aavash">
+                    </div>
+                    <div class="input-glow-group">
+                        <label>ACADEMIC LEVEL</label>
+                        <select id="signup-level" class="cyber-select">
+                            <option value="12">Class 12 (NEB Matriculation)</option>
+                            <option value="10">Class 10 (SEE Framework)</option>
+                        </select>
+                    </div>
+                    <div class="input-glow-group">
+                        <label>ACCESS SECURITY CODE</label>
+                        <input type="password" id="signup-password" required placeholder="Choose a password (min 6 chars)...">
+                    </div>
+                    <button type="submit" class="auth-action-btn signup-btn">REGISTER MATRIX CREDENTIALS</button>
+                </form>
+                <p class="auth-switch-prompt">Already authenticated? <button id="switch-to-login" class="switch-link">Return to Handshake</button></p>
+            </div>
+        </div>
+    </div>
 
     <div class="video-ambient-frame">
         <div id="youtube-player-aarti" class="mobile-safe-iframe"></div>
@@ -45,6 +93,9 @@
             <button class="menu-item" data-target="neb-exam">
                 <span class="menu-icon">🚀</span> NEB EXAM 2084 COUNTDOWN
             </button>
+            <button id="logout-sidebar-btn" class="menu-item menu-logout">
+                <span class="menu-icon">⚠️</span> TERMINATE SESSION
+            </button>
         </nav>
         <div class="drawer-footer">
             <span>CORE TELEMETRY STATUS: NOMINAL</span>
@@ -62,7 +113,7 @@
                 </button>
                 <div class="telemetry-status">
                     <span class="radar-pulse"></span>
-                    <span id="active-system-tag" class="telemetry-text">SYSTEM: NEB RESULT MODULE</span>
+                    <span id="active-system-tag" class="telemetry-text">SYSTEM: OPTIMIZING...</span>
                 </div>
             </div>
             
@@ -80,33 +131,33 @@
 
             <div class="live-clock-terminal">
                 <div class="calendar-badge greg">
-                    <span class="label">AD</span> <span id="current-date-greg">June 15, 2026</span>
+                    <span class="label">AD</span> <span id="current-date-greg">June 17, 2026</span>
                 </div>
                 <div class="calendar-badge nep">
-                    <span class="label">BS</span> <span id="current-date-nep">1 Ashar 2083</span>
+                    <span class="label">BS</span> <span id="current-date-nep">3 Ashar 2083</span>
                 </div>
                 <div id="digital-clock" class="clock-display">00:00:00</div>
             </div>
         </header>
 
         <main class="dashboard">
-            <h1 id="dashboard-title" class="main-title">NEB Grade 12 Result 2026 Countdown</h1>
-            <p id="dashboard-subtitle" class="subtitle">Every second brings the result closer.</p>
+            <h1 id="dashboard-title" class="main-title">Academic Framework Countdown</h1>
+            <p id="dashboard-subtitle" class="subtitle">Every second brings the matrix closer.</p>
 
             <div class="target-matrix-card">
                 <div class="matrix-item">
                     <span class="matrix-label">TARGET ARRIVAL (AD)</span>
-                    <span id="meta-ad" class="matrix-value text-cyan">June 24, 2026</span>
+                    <span id="meta-ad" class="matrix-value text-cyan">-- --, ----</span>
                 </div>
                 <div class="divider-vertical"></div>
                 <div class="matrix-item">
                     <span class="matrix-label">TARGET ARRIVAL (BS)</span>
-                    <span id="meta-bs" class="matrix-value text-purple">10 Ashar 2083</span>
+                    <span id="meta-bs" class="matrix-value text-purple">-- --, ----</span>
                 </div>
                 <div class="divider-vertical"></div>
                 <div class="matrix-item">
                     <span class="matrix-label">T-MINUS METRIC</span>
-                    <span id="days-remaining-badge" class="matrix-value text-white">9 DAYS AWAY</span>
+                    <span id="days-remaining-badge" class="matrix-value text-white">CALCULATING...</span>
                 </div>
             </div>
 
@@ -150,14 +201,66 @@
                 </div>
                 <div class="track-footer">
                     <div class="footer-node">
-                        <span id="trajectory-start-date" class="node-date">June 14, 2026</span>
-                        <span id="trajectory-start-label" class="node-label">31 Jestha 2083 (START)</span>
+                        <span id="trajectory-start-date" class="node-date">-- --, ----</span>
+                        <span id="trajectory-start-label" class="node-label">START POINT</span>
                     </div>
                     <div class="footer-node text-right">
-                        <span id="trajectory-target-date" class="node-date">June 24, 2026</span>
-                        <span id="trajectory-target-label" class="node-label">10 Ashar 2083 (TARGET)</span>
+                        <span id="trajectory-target-date" class="node-date">-- --, ----</span>
+                        <span id="trajectory-target-label" class="node-label">TARGET HORIZON</span>
                     </div>
                 </div>
+            </div>
+
+            <div class="app-split-matrix-grid">
+                
+                <section id="cyber-quiz-module" class="dashboard-card status-panel">
+                    <div class="card-header-cyber">
+                        <div class="matrix-status-light blinking-green"></div>
+                        <h3>QUIZ ENGINE: CLASS <span id="quiz-class-title">--</span></h3>
+                    </div>
+                    
+                    <div id="quiz-intro-screen" class="quiz-body-node">
+                        <p class="crypto-subtext">Initialize testing protocol to gauge syllabus competency vectors.</p>
+                        <button id="start-quiz-btn" class="cyber-trigger-btn">INITIALIZE PROTOCOL ⚔️</button>
+                    </div>
+
+                    <div id="quiz-active-screen" class="quiz-body-node hidden">
+                        <div class="quiz-meta-metrics">
+                            <span class="metric-tag">QUESTION: <b id="quiz-current-index">1</b>/5</span>
+                            <span class="metric-tag">SCORE VECTOR: <b id="quiz-live-score">0</b></span>
+                        </div>
+                        <div class="progress-bar-container"><div id="quiz-progress-fill" class="progress-fill-line"></div></div>
+                        <h4 id="quiz-question-text" class="cyber-question">Loading entity...</h4>
+                        <div id="quiz-options-container" class="options-grid-node"></div>
+                    </div>
+
+                    <div id="quiz-result-screen" class="quiz-body-node hidden">
+                        <h4 class="success-glitch">TEST COMPLETED</h4>
+                        <p class="final-score-readout">COMPETENCY VALUE: <span id="quiz-final-percentage" class="glow-txt">0%</span></p>
+                        <p id="quiz-cloud-status" class="cloud-sync-log">Syncing vector state with Firestore...</p>
+                        <button id="retry-quiz-btn" class="cyber-trigger-btn secondary-cyber">REBOOT SIMULATION 🔄</button>
+                    </div>
+                </section>
+
+                <section id="cyber-gpa-module" class="dashboard-card status-panel">
+                    <div class="card-header-cyber">
+                        <div class="matrix-status-light blinking-purple"></div>
+                        <h3>GPA PREDICTOR LEDGER</h3>
+                    </div>
+                    <div class="gpa-body-node">
+                        <p class="crypto-subtext">Input estimated subject marks to calculate estimated GPA telemetry mappings.</p>
+                        <div id="gpa-input-fields-root" class="gpa-fields-stack">
+                            </div>
+                        <button id="calculate-gpa-btn" class="cyber-trigger-btn total-gpa-btn">RUN GPA PREDICTOR 🧮</button>
+                        
+                        <div id="gpa-result-readout" class="gpa-result-box hidden">
+                            <span class="gpa-label">ESTIMATED GPA PROFILE</span>
+                            <div id="gpa-final-value" class="gpa-score-neon">0.00</div>
+                            <span id="gpa-remarks" class="gpa-remarks-text">GRADE EVALUATION MATRIX</span>
+                        </div>
+                    </div>
+                </section>
+
             </div>
 
             <section id="gateway-routing-module" class="gateway-action-container">
@@ -179,25 +282,26 @@
 
             <section id="forecast-matrix-zone" class="forecast-matrix">
                 <h2 id="matrix-section-header" class="section-header">PREDICTION TIMELINE MATRIX</h2>
-                <div id="matrix-cards-wrapper" class="matrix-grid">
-                    </div>
+                <div id="matrix-cards-wrapper" class="matrix-grid"></div>
             </section>
         </main>
 
         <footer class="system-footer">
             <div class="footer-telemetry-grid">
-                <p class="network-profile-text">NEB Space-Launch Telemetry Platform © 2026 // Distributed Network Profile</p>
-                
+                <p class="network-profile-text">NEB Space-Launch Telemetry Platform © 2026 // Cloud Authenticated Architecture</p>
                 <div class="live-visitor-card">
                     <span class="visitor-ping"></span>
                     <span class="visitor-title">TOTAL REAL VISITORS:</span>
-                    <span id="visitor-count" class="visitor-digits">500</span>
+                    <span id="visitor-count" class="visitor-digits">0</span>
                     <span class="visitor-unit">HITS</span>
                 </div>
             </div>
         </footer>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
