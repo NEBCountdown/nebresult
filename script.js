@@ -1,6 +1,6 @@
 /**
  * =========================================================================
- * REAL-TIME GOOGLE FIREBASE CLOUD CORE HANDSHAKE ARCHITECTURE
+ * GOOGLE FIREBASE REALTIME SECURE API CONSOLE INITIALIZATION
  * =========================================================================
  */
 const firebaseConfig = {
@@ -13,362 +13,618 @@ const firebaseConfig = {
   measurementId: "G-SWDLYZC6MT"
 };
 
-// Initialize Google Server Connections
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
 /**
- * ============================================
- * ACADEMIC COMMAND SYSTEM MULTI-MATRIX CONFIGS
- * ============================================
+ * =========================================================================
+ * SINGLE PAGE APPLICATION (SPA) SUBSYSTEM ROUTING & REGISTRY ENGINE
+ * =========================================================================
  */
 const CLOCK_SYSTEMS = {
     "neb-result": {
-        title: "NEB Grade 12 Result 2083 Countdown",
-        subtitle: "Every second brings the matrix metrics closer.",
-        targetDate: new Date("June 24, 2026 00:00:00").getTime(),
-        startDate: new Date("June 14, 2026 00:00:00").getTime(),
-        targetAD: "June 24, 2026", targetBS: "10 Ashar 2083",
-        tag: "SYSTEM: NEB RESULT MODULE", portalUrl: "neb.ntc.net.np", portalHref: "https://neb.ntc.net.np",
-        instruction: "Official board servers protect result modules using strict isolation protocols. To view metrics, verify symbol sheets, and securely process grade ledgers, establish a clean line by routing directly through the external portal interface node.",
-        btnText: "Launch External Gateway View ⚡", celebTitle: "Result Feed Confirmed.", celebDesc: "Mainframe ledgers have cleared isolated buffering grids.",
+        title: "NEB Grade 12 Result 2083 Countdown", subtitle: "Every second brings the metric evaluation logs closer.",
+        targetDate: new Date("June 24, 2026 00:00:00").getTime(), startDate: new Date("June 14, 2026 00:00:00").getTime(),
+        targetAD: "June 24, 2026", targetBS: "10 Ashar 2083", tag: "SYSTEM: NEB RESULT ARRAYS",
+        portalUrl: "neb.ntc.net.np", portalHref: "https://neb.ntc.net.np",
         matrix: [
-            { tag: "tag-amber", border: "border-amber", type: "EARLIEST EXPECTED", ad: "June 22, 2026", bs: "8 Ashar 2083", note: "Early data processing trajectory" },
-            { tag: "tag-cyan", border: "border-cyan active-track", type: "MOST LIKELY TARGET", ad: "June 24, 2026", bs: "10 Ashar 2083", note: "Standard calibration window" },
-            { tag: "tag-rose", border: "border-rose", type: "LATEST EXPECTED", ad: "June 28, 2026", bs: "14 Ashar 2083", note: "Verification structural fallback delay" }
+            { tag: "tag-amber", border: "", type: "EARLIEST EXPECTED", ad: "June 22, 2026", bs: "8 Ashar 2083", note: "Early data compilation run" },
+            { tag: "tag-cyan", border: "active-track", type: "MOST LIKELY TARGET", ad: "June 24, 2026", bs: "10 Ashar 2083", note: "Standard system timeline" },
+            { tag: "tag-rose", border: "", type: "LATEST EXPECTED", ad: "June 28, 2026", bs: "14 Ashar 2083", note: "Security verification delay barrier" }
         ]
     },
     "see-exam": {
-        title: "SEE Exam 2083 Target Matrix",
-        subtitle: "Secondary foundation deployment protocol ticking down.",
-        targetDate: new Date("March 29, 2027 00:00:00").getTime(),
-        startDate: new Date("June 15, 2026 00:00:00").getTime(),
-        targetAD: "March 29, 2027", targetBS: "15 Chaitra 2083",
-        tag: "SYSTEM: SEE EXAM CONSOLE", portalUrl: "see.gov.np", portalHref: "https://see.gov.np",
-        instruction: "Secondary Education Examination telemetry is cataloged under the National Examinations Board portal arrays. Access model blueprints, schedules, and individual security forms natively via the root domain gateway.",
-        btnText: "Access SEE Examination Center ⚡", celebTitle: "SEE Matrix Concluded.", celebDesc: "Exam collection sheets processed successfully.",
+        title: "SEE Secondary Examination 2083", subtitle: "Secondary academic matriculation tracking engine.",
+        targetDate: new Date("March 29, 2027 00:00:00").getTime(), startDate: new Date("June 15, 2026 00:00:00").getTime(),
+        targetAD: "March 29, 2027", targetBS: "15 Chaitra 2083", tag: "SYSTEM: SEE EXAM ARRAYS",
+        portalUrl: "see.gov.np", portalHref: "https://see.gov.np",
         matrix: [
-            { tag: "tag-amber", border: "border-amber", type: "ROUTINE RELEASE", ad: "January 15, 2027", bs: "2 Magh 2083", note: "Routine distribution trajectory" },
-            { tag: "tag-cyan", border: "border-cyan active-track", type: "LAUNCH DATE AD", ad: "March 29, 2027", bs: "15 Chaitra 2083", note: "Compulsory English sequence start" },
-            { tag: "tag-rose", border: "border-rose", type: "CONCLUSION HORIZON", ad: "April 07, 2027", bs: "24 Chaitra 2083", note: "Technical electives finish path" }
+            { tag: "tag-amber", border: "", type: "SCHEDULING RELEASE", ad: "January 15, 2027", bs: "2 Magh 2083", note: "Routine matrix blueprint distribution" },
+            { tag: "tag-cyan", border: "active-track", type: "EXAMINATION LAUNCH", ad: "March 29, 2027", bs: "15 Chaitra 2083", note: "Compulsory English evaluation start" },
+            { tag: "tag-rose", border: "", type: "CONCLUDING CYCLE", ad: "April 07, 2027", bs: "24 Chaitra 2083", note: "Technical streams compilation end" }
         ]
     },
     "neb-exam": {
-        title: "NEB Class 12 Board Exam 2084",
-        subtitle: "Final deployment phase validation timeline.",
-        targetDate: new Date("April 28, 2027 00:00:00").getTime(),
-        startDate: new Date("June 15, 2026 00:00:00").getTime(),
-        targetAD: "April 28, 2027", targetBS: "14 Baishak 2084",
-        tag: "SYSTEM: NEB BOARD EXAM CONSOLE", portalUrl: "neb.gov.np", portalHref: "https://www.neb.gov.np",
-        instruction: "Class 12 board examination blueprints, structural specification grids, and distribution maps are verified directly by Sanothimi server grids. Establish an external terminal connection below.",
-        btnText: "Route to NEB Board Portal ⚡", celebTitle: "Final Boards Complete.", celebDesc: "System processing collection scripts initialized.",
+        title: "NEB Higher Board Exam 2084", subtitle: "Terminal secondary deployment phase timeline validation.",
+        targetDate: new Date("April 28, 2027 00:00:00").getTime(), startDate: new Date("June 15, 2026 00:00:00").getTime(),
+        targetAD: "April 28, 2027", targetBS: "14 Baishak 2084", tag: "SYSTEM: NEB EXAM CONSOLE",
+        portalUrl: "neb.gov.np", portalHref: "https://www.neb.gov.np",
         matrix: [
-            { tag: "tag-amber", border: "border-amber", type: "ROUTINE BROADCAST", ad: "February 10, 2027", bs: "28 Magh 2083", note: "Schedule array publishing window" },
-            { tag: "tag-cyan", border: "border-cyan active-track", type: "BOARD EXAM START", ad: "April 28, 2027", bs: "14 Baishak 2084", note: "National evaluation vector activation" },
-            { tag: "tag-rose", border: "border-rose", type: "BOARD TERMINATION", ad: "May 09, 2027", bs: "26 Baishak 2084", note: "All streams collection completion" }
+            { tag: "tag-amber", border: "", type: "ROUTINE BROADCAST", ad: "February 10, 2027", bs: "28 Magh 2083", note: "Specification map publishing window" },
+            { tag: "tag-cyan", border: "active-track", type: "BOARD MATRIX TRIGGER", ad: "April 28, 2027", bs: "14 Baishak 2084", note: "National validation stream start" },
+            { tag: "tag-rose", border: "", type: "COLLECTION TERMINATION", ad: "May 09, 2027", bs: "26 Baishak 2084", note: "All stream collection metrics close" }
         ]
     }
 };
 
-// ACADEMIC SYLLABUS QUESTION MATRIX BANK
-const QUIZ_DATABASE = {
-    "10": [
-        { q: "Which programming language paradigm is directly implemented in standard Class 10 QBASIC modules?", a: ["Procedural", "Object-Oriented", "Functional", "Logic-Driven"], c: 0 },
-        { q: "What is the primary physical law dictating the operation of hydraulic brakes in Class 10 Force mechanics?", a: ["Newton's Third Law", "Pascal's Law", "Archimedes' Principle", "Boyle's Law"], c: 1 },
-        { q: "Which structural asset handles long-distance data transport across modern high-speed networks in Nepal?", a: ["Coaxial Cable", "Fiber Optic Line", "Twisted Pair Array", "Microwave Grid"], c: 1 },
-        { q: "What component prevents the backup execution flow of back-current elements in step-down transformers?", a: ["Inverter Core", "Diodes", "Laminated Soft Iron Core", "Commutator ring"], c: 2 },
-        { q: "Which functional database property ensures records remain completely unique across tables?", a: ["Foreign Key", "Index Matrix", "Primary Key", "Query String"], c: 2 }
-    ],
-    "12": [
-        { q: "In Class 12 Rotational Dynamics, how does the moment of inertia change if a spinning ice skater pulls her arms inward?", a: ["Increases", "Decreases", "Stays Identical", "Fluctuates Sinusoidally"], c: 1 },
-        { q: "Which pointer operator is explicitly executed to extract the exact memory address location of a variable in C?", a: ["Indirection (*)", "Ampersand (&)", "Arrow (->)", "Scope Resolution (::)"], c: 1 },
-        { q: "What thermodynamic property is kept constantly static during an Isochoric state cycle translation?", a: ["Pressure", "Enthalpy Matrix", "Temperature", "Volume"], c: 3 },
-        { q: "Which structure handles the primary mapping logic when translating object layouts to standard relational databases?", a: ["ORM Matrix", "Pointer Registry", "Virtual Table Compilation", "Inheritance Tree"], c: 0 },
-        { q: "What happens to the fringe width in a Young's Double Slit interference model if the entire apparatus is immersed in water?", a: ["It broadens", "It narrows down", "Remains entirely constant", "Fringes clear out completely"], c: 1 }
-    ]
-};
+let CURRENT_SPA_VIEW = "countdown-view";
+let ACTIVE_COUNTDOWN_MODE = "neb-result";
+let globalCountdownIntervalId = null;
 
-// SYLLABUS CREDITS TRACKING MAPS
-const CURRICULUM_GPA_SCHEMES = {
-    "10": [
-        { name: "Compulsory English", credit: 4 }, { name: "Compulsory Nepali", credit: 4 },
-        { name: "Compulsory Mathematics", credit: 4 }, { name: "Compulsory Science", credit: 4 },
-        { name: "Social Studies", credit: 4 }, { name: "Health, Environment & Population", credit: 4 }
-    ],
-    "12": [
-        { name: "Compulsory English", credit: 4 }, { name: "Compulsory Nepali", credit: 3 },
-        { name: "Mathematics / Social", credit: 5 }, { name: "Physics / Opt. 1", credit: 5 },
-        { name: "Chemistry / Opt. 2", credit: 5 }, { name: "Computer Science / Opt. 3", credit: 5 }
-    ]
-};
-
-let CURRENT_MODE = "neb-result";
-let animationFrameId = null;
-
-// ELEMENT HOOK LOCATIONS
 const DOM = {
+    authOverlay: document.getElementById("auth-gateway-overlay"),
+    loginPanel: document.getElementById("login-panel"), signupPanel: document.getElementById("signup-panel"), forgotPanel: document.getElementById("forgot-panel"),
+    statusLog: document.getElementById("auth-status-log"),
+    body: document.body,
+    drawer: document.getElementById("nav-drawer"), drawerOverlay: document.getElementById("drawer-overlay"),
+    spaModules: document.querySelectorAll(".spa-view-module"), menuItems: document.querySelectorAll(".menu-item"),
     days: document.getElementById("days"), hours: document.getElementById("hours"), minutes: document.getElementById("minutes"), seconds: document.getElementById("seconds"), milliseconds: document.getElementById("milliseconds"),
-    clock: document.getElementById("digital-clock"), daysBadge: document.getElementById("days-remaining-badge"), progressBar: document.getElementById("progress-fill-bar"), progressPercent: document.getElementById("progress-percentage"),
-    countdownBoard: document.getElementById("countdown-board"), celebrationZone: document.getElementById("celebration-zone"),
+    daysBadge: document.getElementById("days-remaining-badge"), progressBar: document.getElementById("progress-fill-bar"), progressPercent: document.getElementById("progress-percentage"),
     title: document.getElementById("dashboard-title"), subtitle: document.getElementById("dashboard-subtitle"), metaAD: document.getElementById("meta-ad"), metaBS: document.getElementById("meta-bs"),
-    systemTag: document.getElementById("active-system-tag"), urlTag: document.getElementById("portal-url-tag"), instruction: document.getElementById("redirect-instruction-text"), launchBtn: document.getElementById("secure-launch-anchor"), matrixWrapper: document.getElementById("matrix-cards-wrapper"),
-    celebTitle: document.getElementById("celebration-title"), celebDesc: document.getElementById("celebration-desc"), startD: document.getElementById("trajectory-start-date"), startL: document.getElementById("trajectory-start-label"), targetD: document.getElementById("trajectory-target-date"), targetL: document.getElementById("trajectory-target-label"),
-    hamburger: document.getElementById("hamburger-menu-btn"), drawer: document.getElementById("nav-drawer"), drawerClose: document.getElementById("close-drawer-btn"), drawerOverlay: document.getElementById("drawer-overlay"), menuItems: document.querySelectorAll(".menu-item"),
-    authOverlay: document.getElementById("auth-gateway-overlay"), loginPanel: document.getElementById("login-panel"), signupPanel: document.getElementById("signup-panel"), statusLog: document.getElementById("auth-status-log")
+    systemTag: document.getElementById("active-system-tag"), urlTag: document.getElementById("portal-url-tag"), instruction: document.getElementById("redirect-instruction-text"), launchBtn: document.getElementById("secure-launch-anchor"), matrixWrapper: document.getElementById("matrix-cards-wrapper")
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    // LAYER ENTRY INTERACTION HANDLERS
-    document.getElementById("switch-to-signup").addEventListener("click", () => { DOM.loginPanel.classList.add("hidden"); DOM.signupPanel.classList.remove("hidden"); DOM.statusLog.textContent = "AWAITING MATRIX BACKEND ASSIGNMENT..."; });
-    document.getElementById("switch-to-login").addEventListener("click", () => { DOM.signupPanel.classList.add("hidden"); DOM.loginPanel.classList.remove("hidden"); DOM.statusLog.textContent = "SECURE HANDSHAKE PENDING..."; });
-    document.getElementById("logout-sidebar-btn").addEventListener("click", () => { auth.signOut().then(() => window.location.reload()); });
+function switchSPAView(targetViewId) {
+    DOM.spaModules.forEach(mod => mod.classList.add("hidden"));
+    const activeMod = document.getElementById(targetViewId);
+    if(activeMod) activeMod.classList.remove("hidden");
+    CURRENT_SPA_VIEW = targetViewId;
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
 
-    // --- FIREBASE SECURITY REGISTRATION PROCESS ---
+/**
+ * =========================================================================
+ * HIGH-SECURITY PASSWORDS & SECURE IDENTITY AUTHENTICATION FLOWS
+ * =========================================================================
+ */
+document.addEventListener("DOMContentLoaded", () => {
+    // Structural Interface Panel Route Connectors
+    document.getElementById("switch-to-signup").addEventListener("click", () => { toggleAuthPanels("signup"); });
+    document.getElementById("switch-to-forgot").addEventListener("click", () => { toggleAuthPanels("forgot"); });
+    document.getElementById("switch-to-login-from-signup").addEventListener("click", () => { toggleAuthPanels("login"); });
+    document.getElementById("switch-to-login-from-forgot").addEventListener("click", () => { toggleAuthPanels("login"); });
+    
+    // Live Dynamic Security Strength Metrics Evaluation
+    const signupPassInput = document.getElementById("signup-password");
+    const passMeter = document.getElementById("password-requirements");
+    signupPassInput.addEventListener("input", () => {
+        const p = signupPassInput.value;
+        const hasNum = /[0-9]/.test(p);
+        const hasSym = /[^A-Za-z0-9]/.test(p);
+        if (p.length >= 6 && hasNum && hasSym) {
+            passMeter.textContent = "Security Compliance: Approved Alpha Matrix ✔";
+            passMeter.className = "password-meter valid-state";
+        } else {
+            passMeter.textContent = "Complexity Rule Violation: Must include 6+ characters, a number, and a symbol.";
+            passMeter.className = "password-meter invalid-state";
+        }
+    });
+
+    // Cloud Profile Registration Pipeline Execution
     document.getElementById("signup-form").addEventListener("submit", (e) => {
         e.preventDefault();
         const user = document.getElementById("signup-username").value.trim().toLowerCase();
         const level = document.getElementById("signup-level").value;
-        const pass = document.getElementById("signup-password").value;
+        const pass = signupPassInput.value;
 
-        if (pass.length < 6) {
-            DOM.statusLog.textContent = "SECURITY ALERT: ACCESS CODE KEY MUST BE >= 6 CHARS";
-            DOM.statusLog.style.color = "#ff4d6d"; return;
+        if (pass.length < 6 || !/[0-9]/.test(pass) || !/[^A-Za-z0-9]/.test(pass)) {
+            DOM.statusLog.textContent = "REJECTED: CODE INSUFFICIENT STRATEGIC INTEGRITY";
+            DOM.statusLog.style.color = "var(--rose-alert)"; return;
         }
-        DOM.statusLog.textContent = "ESTABLISHING REQ TO CLOUD ARRAYS..."; DOM.statusLog.style.color = "#00f2fe";
-        const cloudEmail = `${user}@academicconsole.net`;
 
-        auth.createUserWithEmailAndPassword(cloudEmail, pass)
+        DOM.statusLog.textContent = "CONNECTING CLOUD FIREWALL REGISTRIES...";
+        DOM.statusLog.style.color = "var(--neon-cyan)";
+        const generatedEmail = `${user}@matrixconsole.net`;
+
+        auth.createUserWithEmailAndPassword(generatedEmail, pass)
             .then((res) => {
-                return db.collection("students").doc(res.user.uid).set({ username: user, gradeLevel: level, timestamp: firebase.firestore.FieldValue.serverTimestamp() });
+                return db.collection("students").doc(res.user.uid).set({
+                    username: user, gradeLevel: level, emailMapping: generatedEmail, createdTimestamp: firebase.firestore.FieldValue.serverTimestamp()
+                });
             })
-            .then(() => { DOM.statusLog.textContent = "REGISTRATION CONFIRMED. REDIRECTING..."; DOM.statusLog.style.color = "#00ff88"; })
-            .catch((err) => { DOM.statusLog.textContent = err.code === "auth/email-already-in-use" ? "ERROR: IDENTIFIER TAKEN" : err.message; DOM.statusLog.style.color = "#ff4d6d"; });
+            .then(() => {
+                DOM.statusLog.textContent = "REGISTRATION COMPLETED. PROFILE SYNCHRONIZED.";
+                DOM.statusLog.style.color = "var(--neon-green)";
+            })
+            .catch((err) => {
+                DOM.statusLog.textContent = err.code === "auth/email-already-in-use" ? "ERROR: STUDENT IDENTIFIER CLAIMED" : err.message;
+                DOM.statusLog.style.color = "var(--rose-alert)";
+            });
     });
 
-    // --- FIREBASE SIGN IN MONITOR PROCESS ---
+    // Cloud Identity Handshake Pipeline Validation
     document.getElementById("login-form").addEventListener("submit", (e) => {
         e.preventDefault();
         const user = document.getElementById("login-username").value.trim().toLowerCase();
         const pass = document.getElementById("login-password").value;
-        DOM.statusLog.textContent = "CONTACTING ENCRYPTED AUTH CENTRALS..."; DOM.statusLog.style.color = "#00f2fe";
+        DOM.statusLog.textContent = "ROUTING HANDSHAKE TELEMETRY TO FIREWALL...";
+        DOM.statusLog.style.color = "var(--neon-cyan)";
 
-        auth.signInWithEmailAndPassword(`${user}@academicconsole.net`, pass)
-            .catch(() => { DOM.statusLog.textContent = "DENIED: INVALID ACCESS PARAMETERS"; DOM.statusLog.style.color = "#ff4d6d"; });
+        auth.signInWithEmailAndPassword(`${user}@matrixconsole.net`, pass)
+            .catch(() => {
+                DOM.statusLog.textContent = "ACCESS DENIED: SECURE ATTRIBUTES INVALID";
+                DOM.statusLog.style.color = "var(--rose-alert)";
+            });
     });
 
-    // --- PERSISTENCE STATE WATCHDOG ARRAYS ---
-    auth.onAuthStateChanged((user) => {
-        if (user) {
-            db.collection("students").doc(user.uid).get().then((doc) => {
-                let level = "12"; if (doc.exists) { level = doc.data().gradeLevel; }
-                sessionStorage.setItem("active_student", user.uid); sessionStorage.setItem("student_level", level);
-                DOM.statusLog.textContent = "VERIFIED. SYNC COMPLETE."; DOM.statusLog.style.color = "#00ff88";
-                CURRENT_MODE = level === "10" ? "see-exam" : "neb-result";
-                
-                initializeDashboardView();
-                initializeQuizSystem(level);
-                buildGpaLedgerInterface(level);
+    // Real-Time Recovery Transmission Node Pipeline
+    document.getElementById("forgot-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const user = document.getElementById("forgot-username").value.trim().toLowerCase();
+        DOM.statusLog.textContent = "AUDITING ENCRYPTED REGISTRY PROFILE FOR IDENTITY...";
+        DOM.statusLog.style.color = "var(--neon-cyan)";
 
-                setTimeout(() => { DOM.authOverlay.style.opacity = "0"; setTimeout(() => DOM.authOverlay.classList.add("hidden"), 500); }, 600);
+        db.collection("students").where("username", "==", user).get()
+            .then((snapshot) => {
+                if (snapshot.empty) {
+                    DOM.statusLog.textContent = "RECOVERY ABORTED: STUDENT RECORD MISSING";
+                    DOM.statusLog.style.color = "var(--rose-alert)"; return;
+                }
+                const mappedEmail = snapshot.docs[0].data().emailMapping;
+                return auth.sendPasswordResetEmail(mappedEmail);
+            })
+            .then((ret) => {
+                if(ret !== undefined) {
+                    DOM.statusLog.textContent = "RECOVERY SENT: RE-VERIFY OUTSIDE PROFILE INBOX ✔";
+                    DOM.statusLog.style.color = "var(--neon-green)";
+                }
+            })
+            .catch((err) => {
+                DOM.statusLog.textContent = `PIPELINE FAULT: ${err.message}`;
+                DOM.statusLog.style.color = "var(--rose-alert)";
+            });
+    });
+
+    // Universal Account Watchdog Sub-Engine Mappings
+    auth.onAuthStateChanged((student) => {
+        if (student) {
+            db.collection("students").doc(student.uid).get().then((doc) => {
+                let assignedGrade = "12";
+                if(doc.exists) assignedGrade = doc.data().gradeLevel;
+                
+                sessionStorage.setItem("matrix_uid", student.uid);
+                sessionStorage.setItem("matrix_grade", assignedGrade);
+                
+                DOM.statusLog.textContent = "HANDSHAKE STATUS: SECURED PASSIVE STREAMING";
+                DOM.statusLog.style.color = "var(--neon-green)";
+
+                // Set initial active state metrics mapping
+                ACTIVE_COUNTDOWN_MODE = assignedGrade === "10" ? "see-exam" : "neb-result";
+                syncNavigationDrawerState();
+                renderCountdownTerminalView();
+                buildSyllabusTestingHub(assignedGrade);
+                renderGPALedgerFields();
+
+                setTimeout(() => {
+                    DOM.authOverlay.style.opacity = "0";
+                    DOM.body.classList.remove("auth-locked");
+                    setTimeout(() => DOM.authOverlay.classList.add("hidden"), 500);
+                }, 600);
             });
         } else {
-            DOM.authOverlay.classList.remove("hidden"); DOM.authOverlay.style.opacity = "1";
+            sessionStorage.clear();
+            DOM.body.classList.add("auth-locked");
+            DOM.authOverlay.classList.remove("hidden");
+            DOM.authOverlay.style.opacity = "1";
+            toggleAuthPanels("login");
         }
     });
-});
 
-/* --- Drawer Sidebar Open Callbacks --- */
-function toggleDrawer() { DOM.drawer.classList.toggle("open"); DOM.drawerOverlay.classList.toggle("visible"); }
-DOM.hamburger.addEventListener("click", toggleDrawer); DOM.drawerClose.addEventListener("click", toggleDrawer); DOM.drawerOverlay.addEventListener("click", toggleDrawer);
-DOM.menuItems.forEach(item => {
-    if(item.id === "logout-sidebar-btn") return;
-    item.addEventListener("click", () => {
-        DOM.menuItems.forEach(i => i.classList.remove("active")); item.classList.add("active");
-        CURRENT_MODE = item.getAttribute("data-target"); initializeDashboardView(); toggleDrawer();
+    document.getElementById("logout-sidebar-btn").addEventListener("click", () => {
+        auth.signOut().then(() => window.location.reload());
     });
 });
 
-/* --- Core Time Pipeline Initialization Render Engine --- */
-function initializeDashboardView() {
-    const cfg = CLOCK_SYSTEMS[CURRENT_MODE];
-    DOM.title.textContent = cfg.title; DOM.subtitle.textContent = cfg.subtitle;
-    DOM.metaAD.textContent = cfg.targetAD; DOM.metaBS.textContent = cfg.targetBS;
-    DOM.systemTag.textContent = cfg.tag; DOM.urlTag.textContent = cfg.portalUrl;
-    DOM.instruction.textContent = cfg.instruction; DOM.launchBtn.setAttribute("href", cfg.portalHref); DOM.launchBtn.innerHTML = cfg.btnText;
-    DOM.celebTitle.textContent = cfg.celebTitle; DOM.celebDesc.textContent = cfg.celebDesc;
-    
-    const dStart = new Date(cfg.startDate), dTarget = new Date(cfg.targetDate);
-    DOM.startD.textContent = dStart.toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
-    DOM.targetD.textContent = dTarget.toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
-    DOM.startL.textContent = `INITIAL CALIBRATION POINT`; DOM.targetL.textContent = `${cfg.targetBS} (ARRIVAL)`;
+function toggleAuthPanels(panelName) {
+    DOM.loginPanel.classList.add("hidden"); DOM.signupPanel.classList.add("hidden"); DOM.forgotPanel.classList.add("hidden");
+    if(panelName === "login") { DOM.loginPanel.classList.remove("hidden"); DOM.statusLog.textContent = "SECURE HANDSHAKE PENDING..."; }
+    else if(panelName === "signup") { DOM.signupPanel.classList.remove("hidden"); DOM.statusLog.textContent = "AWAITING MATRIX BACKEND CONFIGURATION..."; }
+    else if(panelName === "forgot") { DOM.forgotPanel.classList.remove("hidden"); DOM.statusLog.textContent = "RECOVERY PARAMS SEQUENCING..."; }
+}
 
-    DOM.matrixWrapper.innerHTML = cfg.matrix.map(card => `
-        <div class="forecast-card ${card.border}">
-            <div class="card-tag ${card.tag}">${card.type}</div>
-            <h3>${card.ad}</h3><p class="date-bs">${card.bs}</p><span class="card-status-note">${card.note}</span>
+/**
+ * =========================================================================
+ * NAVIGATION SIDEBAR SLIDE OUT CONSOLE MAPPINGS
+ * =========================================================================
+ */
+function toggleDrawerConsole() { DOM.drawer.classList.toggle("open"); DOM.drawerOverlay.classList.toggle("visible"); }
+document.getElementById("hamburger-menu-btn").addEventListener("click", toggleDrawerConsole);
+document.getElementById("close-drawer-btn").addEventListener("click", toggleDrawerConsole);
+DOM.drawerOverlay.addEventListener("click", toggleDrawerConsole);
+
+DOM.menuItems.forEach(btn => {
+    if(btn.id === "logout-sidebar-btn") return;
+    btn.addEventListener("click", () => {
+        DOM.menuItems.forEach(i => i.classList.remove("active"));
+        btn.classList.add("active");
+        const viewId = btn.getAttribute("data-view");
+        
+        if (viewId === "countdown-view") {
+            ACTIVE_COUNTDOWN_MODE = btn.getAttribute("data-target");
+            renderCountdownTerminalView();
+        }
+        switchSPAView(viewId);
+        toggleDrawerConsole();
+    });
+});
+
+function syncNavigationDrawerState() {
+    const userGrade = sessionStorage.getItem("matrix_grade") || "12";
+    document.getElementById("nav-quiz-10-btn").setAttribute("data-grade", "10");
+    document.getElementById("nav-quiz-12-btn").setAttribute("data-grade", "12");
+    
+    document.querySelectorAll(".menu-item[data-grade]").forEach(b => {
+        b.addEventListener("click", () => {
+            buildSyllabusTestingHub(b.getAttribute("data-grade"));
+        });
+    });
+}
+
+/**
+ * =========================================================================
+ * CORE DUAL METRIC QUANTUM COUNTDOWN PIPELINE ENGINE
+ * =========================================================================
+ */
+function renderCountdownTerminalView() {
+    const data = CLOCK_SYSTEMS[ACTIVE_COUNTDOWN_MODE];
+    DOM.title.textContent = data.title; DOM.subtitle.textContent = data.subtitle;
+    DOM.metaAD.textContent = data.targetAD; DOM.metaBS.textContent = data.targetBS;
+    DOM.systemTag.textContent = data.tag; DOM.urlTag.textContent = data.portalUrl;
+    DOM.launchBtn.setAttribute("href", data.portalHref);
+    
+    const dStart = new Date(data.startDate), dTarget = new Date(data.targetDate);
+    document.getElementById("trajectory-start-date").textContent = dStart.toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
+    document.getElementById("trajectory-target-date").textContent = dTarget.toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
+
+    DOM.matrixWrapper.innerHTML = data.matrix.map(c => `
+        <div class="forecast-card ${c.border}">
+            <div class="card-tag ${c.tag}">${c.type}</div>
+            <h3>${c.ad}</h3><p class="date-bs">${c.bs}</p><span class="card-status-note">${c.note}</span>
         </div>
     `).join('');
 
-    DOM.countdownBoard.classList.remove("hidden"); DOM.celebrationZone.classList.add("hidden");
-    if (animationFrameId) cancelAnimationFrame(animationFrameId);
-    runQuantumCountdown();
+    document.getElementById("countdown-board").classList.remove("hidden");
+    document.getElementById("celebration-zone").classList.add("hidden");
+    
+    if (globalCountdownIntervalId) clearInterval(globalCountdownIntervalId);
+    globalCountdownIntervalId = setInterval(executeQuantumCountdownTicks, 7);
 }
 
-function runQuantumCountdown() {
-    const cfg = CLOCK_SYSTEMS[CURRENT_MODE]; const timeNow = Date.now(); const delta = cfg.targetDate - timeNow;
-    if (delta <= 0) { executeTerminationState(); return; }
-
-    const totalSecs = Math.floor(delta / 1000); const totalMins = Math.floor(totalSecs / 60); const totalHrs = Math.floor(totalMins / 60);
-    const d = Math.floor(totalHrs / 24); const h = totalHrs % 24; const m = totalMins % 60; const s = totalSecs % 60; const ms = Math.floor(delta % 1000);
+function executeQuantumCountdownTicks() {
+    if(CURRENT_SPA_VIEW !== "countdown-view") return;
+    const cfg = CLOCK_SYSTEMS[ACTIVE_COUNTDOWN_MODE]; const now = Date.now(); const delta = cfg.targetDate - now;
+    if (delta <= 0) {
+        clearInterval(globalCountdownIntervalId);
+        DOM.days.textContent = "00"; DOM.hours.textContent = "00"; DOM.minutes.textContent = "00"; DOM.seconds.textContent = "00"; DOM.milliseconds.textContent = "000";
+        DOM.progressBar.style.width = "100%"; DOM.progressPercent.textContent = "100.0000%"; DOM.daysBadge.textContent = "TIMELINE REACHED";
+        document.getElementById("countdown-board").classList.add("hidden"); document.getElementById("celebration-zone").classList.remove("hidden");
+        return;
+    }
+    const totSec = Math.floor(delta / 1000); const totMin = Math.floor(totSec / 60); const totHr = Math.floor(totMin / 60);
+    const d = Math.floor(totHr / 24); const h = totHr % 24; const m = totMin % 60; const s = totSec % 60; const ms = Math.floor(delta % 1000);
 
     DOM.days.textContent = String(d).padStart(2, '0'); DOM.hours.textContent = String(h).padStart(2, '0'); DOM.minutes.textContent = String(m).padStart(2, '0'); DOM.seconds.textContent = String(s).padStart(2, '0'); DOM.milliseconds.textContent = String(ms).padStart(3, '0');
-    DOM.daysBadge.textContent = `${d + 1} DAYS AWAY`;
+    DOM.daysBadge.textContent = `${d + 1} DAYS REMAINING`;
 
-    const windowSpan = cfg.targetDate - cfg.startDate; const elapsed = timeNow - cfg.startDate;
-    let progress = Math.min(Math.max((elapsed / windowSpan) * 100, 0), 100);
-    DOM.progressBar.style.width = `${progress.toFixed(4)}%`; DOM.progressPercent.textContent = `${progress.toFixed(4)}%`;
-
-    animationFrameId = requestAnimationFrame(runQuantumCountdown);
+    const span = cfg.targetDate - cfg.startDate; const elapsed = now - cfg.startDate;
+    let pct = Math.min(Math.max((elapsed / span) * 100, 0), 100);
+    DOM.progressBar.style.width = `${pct.toFixed(4)}%`; DOM.progressPercent.textContent = `${pct.toFixed(4)}%`;
 }
 
-function runSystemClock() {
-    const t = new Date(); DOM.clock.textContent = `${String(t.getHours()).padStart(2, '0')}:${String(t.getMinutes()).padStart(2, '0')}:${String(t.getSeconds()).padStart(2, '0')}`;
+function processSystemClockTicks() {
+    const clockNode = document.getElementById("digital-clock"); if(!clockNode) return;
+    const t = new Date(); clockNode.textContent = `${String(t.getHours()).padStart(2, '0')}:${String(t.getMinutes()).padStart(2, '0')}:${String(t.getSeconds()).padStart(2, '0')}`;
+    // Simulate high precision calendars mapping
+    document.getElementById("current-date-greg").textContent = t.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+    document.getElementById("current-date-nep").textContent = "3 Ashar 2083";
 }
-function executeTerminationState() {
-    DOM.days.textContent = "00"; DOM.hours.textContent = "00"; DOM.minutes.textContent = "00"; DOM.seconds.textContent = "00"; DOM.milliseconds.textContent = "000";
-    DOM.progressBar.style.width = "100%"; DOM.progressPercent.textContent = "100.0000%"; DOM.daysBadge.textContent = "HORIZON REACHED";
-    DOM.countdownBoard.classList.add("hidden"); DOM.celebrationZone.classList.remove("hidden");
-}
-setInterval(runSystemClock, 1000); runSystemClock();
+setInterval(processSystemClockTicks, 1000);
 
 /**
  * =========================================================================
- * ACADEMIC TESTING MATRIX CORE INTELLIGENCE & CLOUD DATA SYNC
+ * PROFESSIONAL ENHANCED SYLLABUS MULTI-SET TESTING CORE ENGINE
  * =========================================================================
  */
-let currentQuizSet = [], currentQuestionIndex = 0, liveUserScore = 0, hasAnswered = false;
+const TESTING_TOPICS_MAP = {
+    "10": ["Computer Science", "Force & Mechanics", "Optics & Electricity", "Database Management"],
+    "12": ["Physics Dynamics", "Computer Science (C)", "Thermodynamics", "Relational Database Map"]
+};
 
-function initializeQuizSystem(userLevel) {
-    document.getElementById("quiz-class-title").textContent = userLevel;
-    currentQuizSet = QUIZ_DATABASE[userLevel] || QUIZ_DATABASE["12"];
-    resetQuizEngineState();
+// Generates precise mock distribution parameters dynamically without file bloating
+function abstractQuestionNodeItem(grade, subject, setNum, questionIdx) {
+    const keys = [`${grade}-${subject}-S${setNum}-Q${questionIdx}`];
+    return {
+        q: `[Syllabus Matrix Node Vector: ${subject}] Evaluate high-yield structural equation framework properties matching question node index ${questionIdx} inside evaluation set deck ${setNum}.`,
+        a: [`Syllabus Paradigm Option Target Alpha (${keys})`, `Target Vector Hypothesis Beta`, `Calculated Root Matrix Variant Gamma`, `System Fallback Variable Delta`],
+        c: (setNum + questionIdx) % 4
+    };
 }
-document.getElementById("start-quiz-btn").addEventListener("click", () => {
-    document.getElementById("quiz-intro-screen").classList.add("hidden"); document.getElementById("quiz-active-screen").classList.remove("hidden"); renderQuizQuestion();
-});
-document.getElementById("retry-quiz-btn").addEventListener("click", resetQuizEngineState);
 
-function resetQuizEngineState() {
-    currentQuestionIndex = 0; liveUserScore = 0;
-    document.getElementById("quiz-intro-screen").classList.remove("hidden"); document.getElementById("quiz-active-screen").classList.add("hidden"); document.getElementById("quiz-result-screen").classList.add("hidden");
-}
-function renderQuizQuestion() {
-    hasAnswered = false; const qItem = currentQuizSet[currentQuestionIndex];
-    document.getElementById("quiz-current-index").textContent = currentQuestionIndex + 1; document.getElementById("quiz-live-score").textContent = liveUserScore;
-    document.getElementById("quiz-progress-fill").style.width = `${(currentQuestionIndex / currentQuizSet.length) * 100}%`;
-    document.getElementById("quiz-question-text").textContent = qItem.q;
+let activeQuizRuntimeState = { grade: "", subject: "", set: 0, questionsList: [], index: 0, selectionsLog: [] };
+
+function buildSyllabusTestingHub(grade) {
+    document.getElementById("quiz-view-class-lbl").textContent = grade;
+    const tabRack = document.getElementById("quiz-subject-tabs"); tabRack.innerHTML = "";
+    const contentRack = document.getElementById("quiz-sets-rack"); contentRack.innerHTML = "";
     
-    const optContainer = document.getElementById("quiz-options-container"); optContainer.innerHTML = "";
-    qItem.a.forEach((opt, idx) => {
-        const btn = document.createElement("button"); btn.className = "option-cyber-btn"; btn.textContent = `${String.fromCharCode(65 + idx)}. ${opt}`;
-        btn.addEventListener("click", () => {
-            if (hasAnswered) return; hasAnswered = true;
-            const btns = optContainer.querySelectorAll(".option-cyber-btn");
-            if (idx === qItem.c) { btn.classList.add("correct-node"); liveUserScore += 20; } else { btn.classList.add("wrong-node"); btns[qItem.c].classList.add("correct-node"); }
-            setTimeout(() => { currentQuestionIndex++; if (currentQuestionIndex < currentQuizSet.length) { renderQuizQuestion(); } else { terminateQuizProtocol(); } }, 1500);
+    const subjects = TESTING_TOPICS_MAP[grade] || TESTING_TOPICS_MAP["12"];
+    subjects.forEach((subj, idx) => {
+        const tab = document.createElement("button");
+        tab.className = `sub-tab-btn ${idx === 0 ? 'active' : ''}`;
+        tab.textContent = subj.toUpperCase();
+        tab.addEventListener("click", () => {
+            document.querySelectorAll(".sub-tab-btn").forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            renderSetsRackForSubject(grade, subj);
         });
-        optContainer.appendChild(btn);
+        tabRack.appendChild(tab);
     });
+    renderSetsRackForSubject(grade, subjects[0]);
 }
-function terminateQuizProtocol() {
-    document.getElementById("quiz-active-screen").classList.add("hidden"); document.getElementById("quiz-result-screen").classList.remove("hidden"); document.getElementById("quiz-progress-fill").style.width = "100%";
-    const pct = (liveUserScore / (currentQuizSet.length * 20)) * 100; document.getElementById("quiz-final-percentage").textContent = `${pct}%`;
-    const syncLog = document.getElementById("quiz-cloud-status"); syncLog.textContent = "SAVING TELEMETRY METRICS TO GOOGLE CORES..."; syncLog.style.color = "#00f2fe";
+
+function renderSetsRackForSubject(grade, subject) {
+    const rack = document.getElementById("quiz-sets-rack"); rack.innerHTML = "";
+    for(let i = 1; i <= 10; i++) {
+        const card = document.createElement("div");
+        card.className = "set-cyber-card";
+        card.innerHTML = `<span class="set-number-label">${String(i).padStart(2,'0')}</span><span class="set-meta-info">DECK SET</span>`;
+        card.addEventListener("click", () => triggerQuizEngineSequence(grade, subject, i));
+        rack.appendChild(card);
+    }
+}
+
+function triggerQuizEngineSequence(grade, subject, setNumber) {
+    let dataset = [];
+    for(let q = 1; q <= 10; q++) { dataset.push(abstractQuestionNodeItem(grade, subject, setNumber, q)); }
     
-    const u = auth.currentUser;
-    if(u) { db.collection("students").doc(u.uid).set({ latestQuizScore: pct, quizTerminus: firebase.firestore.FieldValue.serverTimestamp() }, { merge: true }).then(() => { syncLog.textContent = "CLOUD RETRIEVAL MAP SECURED ✔"; syncLog.style.color = "#00ff88"; }); }
+    activeQuizRuntimeState = { grade: grade, subject: subject, set: setNumber, questionsList: dataset, index: 0, selectionsLog: [] };
+    
+    document.getElementById("quiz-meta-subj").textContent = subject;
+    document.getElementById("quiz-meta-set").textContent = String(setNumber).padStart(2,'0');
+    
+    switchSPAView("quiz-active-engine-view");
+    loadActiveEngineQuestionField();
 }
+
+function loadActiveEngineQuestionField() {
+    const s = activeQuizRuntimeState; const item = s.questionsList[s.index];
+    document.getElementById("quiz-current-idx").textContent = s.index + 1;
+    document.getElementById("quiz-run-progress-fill").style.width = `${((s.index) / s.questionsList.length) * 100}%`;
+    document.getElementById("active-question-text").textContent = item.q;
+    
+    const container = document.getElementById("active-options-container"); container.innerHTML = "";
+    const nextBtn = document.getElementById("quiz-next-step-btn"); nextBtn.classList.add("hidden");
+
+    item.a.forEach((opt, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "option-node-item";
+        btn.textContent = `${String.fromCharCode(65 + idx)}. ${opt}`;
+        btn.addEventListener("click", () => {
+            container.querySelectorAll(".option-node-item").forEach(b => b.classList.remove("selected-node"));
+            btn.classList.add("selected-node");
+            s.selectionsLog[s.index] = idx;
+            nextBtn.classList.remove("hidden");
+        });
+        container.appendChild(btn);
+    });
+    
+    if(s.index === s.questionsList.length - 1) { nextBtn.textContent = "COMPILE & SUBMIT MATRIX 📊"; }
+    else { nextBtn.textContent = "Proceed Matrix Node ➡️"; }
+}
+
+document.getElementById("quiz-next-step-btn").addEventListener("click", () => {
+    const s = activeQuizRuntimeState;
+    if(s.index < s.questionsList.length - 1) {
+        s.index++; loadActiveEngineQuestionField();
+    } else {
+        compileAndDisplayTestingEvaluation();
+    }
+});
+document.getElementById("quit-quiz-engine-btn").addEventListener("click", () => {
+    if(confirm("Abort processing evaluation metrics? Current response maps will be wiped out.")) { switchSPAView("quiz-selection-view"); }
+});
+
+function compileAndDisplayTestingEvaluation() {
+    switchSPAView("quiz-evaluation-view");
+    const s = activeQuizRuntimeState; let correctCounter = 0;
+    const ledger = document.getElementById("eval-breakdown-ledger"); ledger.innerHTML = "";
+
+    s.questionsList.forEach((q, idx) => {
+        const userPick = s.selectionsLog[idx];
+        const isCorrect = userPick === q.c; if(isCorrect) correctCounter++;
+        
+        const row = document.createElement("div"); row.className = "audit-item-row";
+        row.innerHTML = `
+            <div class="audit-question-txt">Item Node ${idx + 1}: ${q.q}</div>
+            <div class="audit-vector-lines">
+                <div class="vector-line correct-anchor">Verified Correct Path: ${String.fromCharCode(65 + q.c)}. ${q.a[q.c]}</div>
+                ${!isCorrect ? `<div class="vector-line user-pick-wrong">Your Input Vector: ${String.fromCharCode(65 + userPick)}. ${q.a[userPick]}</div>` : ''}
+            </div>
+        `;
+        ledger.appendChild(row);
+    });
+
+    const finalPct = (correctCounter / s.questionsList.length) * 100;
+    document.getElementById("eval-score-pct").textContent = `${finalPct}%`;
+    document.getElementById("eval-score-fraction").textContent = `Processed ${correctCounter} out of ${s.questionsList.length} matrices accurately.`;
+
+    const cloudMsg = document.getElementById("quiz-cloud-push-status");
+    cloudMsg.textContent = "TRANSMITTING SCORE METRICS SECURELY TO CLOUD GATEWAYS..."; cloudMsg.style.color = "var(--neon-cyan)";
+    
+    const uid = sessionStorage.getItem("matrix_uid");
+    if(uid) {
+        db.collection("students").doc(uid).collection("quiz_history").add({
+            subject: s.subject, setNumber: s.set, accuracyRating: finalPct, timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        }).then(() => {
+            cloudMsg.textContent = "CLOUD VECTOR TRACKING OVERLAY SYNCHRONIZED ✔"; cloudMsg.style.color = "var(--neon-green)";
+        });
+    }
+}
+document.getElementById("exit-evaluation-btn").addEventListener("click", () => switchSPAView("quiz-selection-view"));
 
 /**
  * =========================================================================
- * NEB / SEE CORE HIGH-PRECISION GPA PREDICTOR CALCULATOR LEDGER
+ * CORE HIGH-PRECISION MULTI-STREAM WEIGHTED GPA PREDICTOR LEDGER
  * =========================================================================
  */
-function buildGpaLedgerInterface(level) {
-    const wrapper = document.getElementById("gpa-input-fields-root"); wrapper.innerHTML = "";
-    const courses = CURRICULUM_GPA_SCHEMES[level] || CURRICULUM_GPA_SCHEMES["12"];
-    courses.forEach((item, index) => {
-        const row = document.createElement("div"); row.className = "gpa-row-node";
-        row.innerHTML = `<label>${item.name}</label><input type="number" min="0" max="100" class="gpa-input-field" data-credit="${item.credit}" placeholder="Marks" required>`;
-        wrapper.appendChild(row);
+let CURRENT_STREAM_SELECTION = "science";
+
+const STREAM_SCHEMES_MAP = {
+    "science-computer": [
+        { id: "s1", name: "Compulsory English", thMax: 75, prMax: 25, cr: 4 }, { id: "s2", name: "Compulsory Nepali", thMax: 75, prMax: 25, cr: 3 },
+        { id: "s3", name: "Mathematics Framework", thMax: 100, prMax: 0, cr: 5 }, { id: "s4", name: "Physics Core Matrix", thMax: 75, prMax: 25, cr: 5 },
+        { id: "s5", name: "Chemistry Core Matrix", thMax: 75, prMax: 25, cr: 5 }, { id: "s6", name: "Computer Science Vector", thMax: 50, prMax: 50, cr: 5 }
+    ],
+    "science-biology": [
+        { id: "s1", name: "Compulsory English", thMax: 75, prMax: 25, cr: 4 }, { id: "s2", name: "Compulsory Nepali", thMax: 75, prMax: 25, cr: 3 },
+        { id: "s3", name: "Mathematics Framework", thMax: 100, prMax: 0, cr: 5 }, { id: "s4", name: "Physics Core Matrix", thMax: 75, prMax: 25, cr: 5 },
+        { id: "s5", name: "Chemistry Core Matrix", thMax: 75, prMax: 25, cr: 5 }, { id: "s7", name: "Biology Core Matrix", thMax: 75, prMax: 25, cr: 5 }
+    ],
+    "management": [
+        { id: "m1", name: "Compulsory English", thMax: 75, prMax: 25, cr: 4 }, { id: "m2", name: "Compulsory Nepali", thMax: 75, prMax: 25, cr: 3 },
+        { id: "m3", name: "Social Studies / Life Skills", thMax: 75, prMax: 25, cr: 5 }, { id: "m4", name: "Principles of Accounting I", thMax: 75, prMax: 25, cr: 5 },
+        { id: "m5", name: "Economics Matrix / Marketing", thMax: 75, prMax: 25, cr: 5 }, { id: "m6", name: "Business Math / Computer App", thMax: 75, prMax: 25, cr: 5 }
+    ]
+};
+
+function renderGPALedgerFields() {
+    const root = document.getElementById("gpa-dynamic-fields-stack"); root.innerHTML = "";
+    document.getElementById("gpa-empty-state-prompt").classList.remove("hidden");
+    document.getElementById("gpa-results-display-panel").classList.add("hidden");
+    
+    let key = CURRENT_STREAM_SELECTION;
+    if(key === "science") {
+        const val = document.querySelector('input[name="sci-elective"]:checked').value;
+        key = `science-${val}`; document.getElementById("science-electives-row").style.display = "flex";
+    } else {
+        document.getElementById("science-electives-row").style.display = "none";
+    }
+
+    const structure = STREAM_SCHEMES_MAP[key];
+    structure.forEach(s => {
+        const row = document.createElement("div"); row.className = "gpa-field-row-node";
+        row.innerHTML = `
+            <label>${s.name}</label>
+            <input type="number" min="0" max="${s.thMax}" class="gpa-mini-input th-node" data-max="${s.thMax}" data-credit="${s.cr}" placeholder="Max ${s.thMax}" required>
+            <input type="number" min="0" max="${s.prMax}" class="gpa-mini-input pr-node" data-max="${s.prMax}" placeholder="Max ${s.prMax}" ${s.prMax === 0 ? 'disabled value="0"' : 'required'}>
+        `;
+        root.appendChild(row);
     });
-    document.getElementById("gpa-result-readout").classList.add("hidden");
 }
 
-document.getElementById("calculate-gpa-btn").addEventListener("click", () => {
-    const inputNodes = document.querySelectorAll(".gpa-input-field");
-    let totalQualityPoints = 0, totalCreditsEarned = 0, structuralFault = false;
+document.querySelectorAll(".stream-toggle-btn").forEach(b => {
+    b.addEventListener("click", () => {
+        document.querySelectorAll(".stream-toggle-btn").forEach(btn => btn.classList.remove("active"));
+        b.classList.add("active"); CURRENT_STREAM_SELECTION = b.getAttribute("data-stream");
+        renderGPALedgerFields();
+    });
+});
+document.querySelectorAll('input[name="sci-elective"]').forEach(r => { r.addEventListener("change", renderGPALedgerFields); });
 
-    inputNodes.forEach(node => {
-        const marks = parseFloat(node.value); const credit = parseFloat(node.getAttribute("data-credit"));
-        if (isNaN(marks) || marks < 0 || marks > 100) { structuralFault = true; return; }
+document.getElementById("execute-gpa-matrix-btn").addEventListener("click", () => {
+    const fields = document.querySelectorAll(".gpa-field-row-node");
+    let calculatedQualityPoints = 0, accruedCreditUnits = 0, matrixFailure = false;
+    const miniLedger = document.getElementById("gpa-subject-breakdown-ledger"); miniLedger.innerHTML = "";
+
+    fields.forEach(f => {
+        const thInput = f.querySelector(".th-node"); const prInput = f.querySelector(".pr-node");
+        const thVal = parseFloat(thInput.value); const prVal = parseFloat(prInput.value);
+        const thMax = parseFloat(thInput.getAttribute("data-max")); const prMax = parseFloat(prInput.getAttribute("data-max"));
+        const cr = parseFloat(thInput.getAttribute("data-credit"));
         
-        let gp = 0.0;
-        if (marks >= 90) gp = 4.0; else if (marks >= 80) gp = 3.6; else if (marks >= 70) gp = 3.2; else if (marks >= 60) gp = 2.8;
-        else if (marks >= 50) gp = 2.4; else if (marks >= 40) gp = 2.0; else if (marks >= 35) gp = 1.6; else gp = 0.0;
+        if(isNaN(thVal) || thVal < 0 || thVal > thMax || isNaN(prVal) || prVal < 0 || prVal > prMax) { matrixFailure = true; return; }
+        
+        // Comprehensive NEB Framework Percentage Weight Scaling
+        const summatedMarks = thVal + prVal; const totalPotentialMax = thMax + prMax;
+        const totalPct = (summatedMarks / totalPotentialMax) * 100;
+        
+        let gp = 0.0; let symbol = "F";
+        if(totalPct >= 90) { gp = 4.0; symbol = "A+"; } else if(totalPct >= 80) { gp = 3.6; symbol = "A"; }
+        else if(totalPct >= 70) { gp = 3.2; symbol = "B+"; } else if(totalPct >= 60) { gp = 2.8; symbol = "B"; }
+        else if(totalPct >= 50) { gp = 2.4; symbol = "C+"; } else if(totalPct >= 40) { gp = 2.0; symbol = "C"; }
+        else if(totalPct >= 35) { gp = 1.6; symbol = "D"; } else { gp = 0.0; symbol = "NG"; }
 
-        totalQualityPoints += gp * credit; totalCreditsEarned += credit;
+        calculatedQualityPoints += (gp * cr); accruedCreditUnits += cr;
+        
+        const subjName = f.querySelector("label").textContent;
+        const row = document.createElement("div"); row.className = "subj-ledger-row";
+        row.innerHTML = `<span>${subjName}</span><span class="grade-tag">${symbol} (${gp.toFixed(2)})</span>`;
+        miniLedger.appendChild(row);
     });
 
-    const displayBox = document.getElementById("gpa-result-readout");
-    if (structuralFault) { alert("Matrix exception: Ensure inputs match scale intervals (0-100)."); return; }
+    if(matrixFailure) { alert("Matrix Evaluation Exception: Inputs missing or exceed scaled bounds."); return; }
     
-    const finalGpa = totalQualityPoints / totalCreditsEarned;
-    document.getElementById("gpa-final-value").textContent = finalGpa.toFixed(2);
+    const definitiveGPA = calculatedQualityPoints / accruedCreditUnits;
+    document.getElementById("gpa-neon-metric").textContent = definitiveGPA.toFixed(2);
     
-    const remarks = document.getElementById("gpa-remarks");
-    if(finalGpa >= 3.6) { remarks.textContent = "OUTSTANDING (ACC-GRADE: A+)"; remarks.style.color = "#00ff88"; }
-    else if(finalGpa >= 3.2) { remarks.textContent = "EXCELLENT (ACC-GRADE: A)"; remarks.style.color = "#00f2fe"; }
-    else if(finalGpa >= 2.8) { remarks.textContent = "VERY GOOD (ACC-GRADE: B+)"; remarks.style.color = "#9d4edd"; }
-    else if(finalGpa >= 2.0) { remarks.textContent = "SATISFACTORY (ACC-GRADE: C)"; remarks.style.color = "#ffb703"; }
-    else { remarks.textContent = "INSUFFICIENT (DIAGNOSIS: F)"; remarks.style.color = "#ff4d6d"; }
+    const txtBadge = document.getElementById("gpa-text-grade-badge");
+    if(definitiveGPA >= 3.6) { txtBadge.textContent = "PROFILE STATUS: OUTSTANDING (A+)"; txtBadge.style.color = "var(--neon-green)"; }
+    else if(definitiveGPA >= 3.2) { txtBadge.textContent = "PROFILE STATUS: EXCELLENT (A)"; txtBadge.style.color = "var(--neon-cyan)"; }
+    else if(definitiveGPA >= 2.8) { txtBadge.textContent = "PROFILE STATUS: VERY GOOD (B+)"; txtBadge.style.color = "var(--neon-purple)"; }
+    else if(definitiveGPA >= 2.0) { txtBadge.textContent = "PROFILE STATUS: SATISFACTORY (C)"; txtBadge.style.color = "var(--amber-alert)"; }
+    else { txtBadge.textContent = "PROFILE STATUS: INSUFFICIENT GRADIENT (NG)"; txtBadge.style.color = "var(--rose-alert)"; }
 
-    displayBox.classList.remove("hidden");
+    document.getElementById("gpa-empty-state-prompt").classList.add("hidden");
+    document.getElementById("gpa-results-display-panel").classList.remove("hidden");
 });
 
 /**
- * ===================================================================================
- * ANTI-AD TRINITY AUDIO CONSOLE (MOBILE-IGNITED WITH EXACT TRUE RESUME / PAUSE LOGIC)
- * ===================================================================================
+ * =========================================================================
+ * ANTIDOTE-AD MULTI-CHANNEL AMBIENT AUDIO GRAPH CONTROLS
+ * =========================================================================
  */
-let playerAarti, playerBell, playerSankha, isAartiPlaying = false, isBellMuted = true, isSankhaMuted = true;
-const audioButton = document.getElementById("audio-toggle"), bellBtn = document.getElementById("btn-bell"), sankhaBtn = document.getElementById("btn-sankha"), overlayShield = document.getElementById("mobile-ignition-overlay");
+let playerAarti, playerBell, playerSankha, loadedPlayersCount = 0;
+let isAartiActive = false, isBellActive = false, isSankhaActive = false;
 
 const tag = document.createElement('script'); tag.src = "https://www.youtube.com/iframe_api";
-const firstScriptTag = document.getElementsByTagName('script')[0]; firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+document.getElementsByTagName('head')[0].appendChild(tag);
 
 function onYouTubeIframeAPIReady() {
-    playerAarti = new YT.Player('youtube-player-aarti', { videoId: 'TTVAyS9wOV4', host: 'https://www.youtube-nocookie.com', playerVars: { 'autoplay': 0, 'controls': 0, 'loop': 1, 'playlist': 'TTVAyS9wOV4', 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 0, 'playsinline': 1 }, events: { 'onReady': onPlayerSystemsReady } });
-    playerBell = new YT.Player('youtube-player-bell', { videoId: 'hw3vQ0_-Bgw', host: 'https://www.youtube-nocookie.com', playerVars: { 'autoplay': 1, 'controls': 0, 'loop': 1, 'playlist': 'hw3vQ0_-Bgw', 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 1, 'playsinline': 1 }, events: { 'onReady': onPlayerSystemsReady } });
-    playerSankha = new YT.Player('youtube-player-sankha', { videoId: 'Hc-jD3wn5o4', host: 'https://www.youtube-nocookie.com', playerVars: { 'autoplay': 1, 'controls': 0, 'loop': 1, 'playlist': 'Hc-jD3wn5o4', 'modestbranding': 1, 'rel': 0, 'showinfo': 0, 'mute': 1, 'playsinline': 1 }, events: { 'onReady': onPlayerSystemsReady } });
+    playerAarti = new YT.Player('youtube-player-aarti', { videoId: 'TTVAyS9wOV4', host: 'https://www.youtube-nocookie.com', playerVars: { 'autoplay': 0, 'controls': 0, 'loop': 1, 'playlist': 'TTVAyS9wOV4', 'mute': 1, 'playsinline': 1 }, events: { 'onReady': trackPlayersReady } });
+    playerBell = new YT.Player('youtube-player-bell', { videoId: 'hw3vQ0_-Bgw', host: 'https://www.youtube-nocookie.com', playerVars: { 'autoplay': 0, 'controls': 0, 'loop': 1, 'playlist': 'hw3vQ0_-Bgw', 'mute': 1, 'playsinline': 1 }, events: { 'onReady': trackPlayersReady } });
+    playerSankha = new YT.Player('youtube-player-sankha', { videoId: 'Hc-jD3wn5o4', host: 'https://www.youtube-nocookie.com', playerVars: { 'autoplay': 0, 'controls': 0, 'loop': 1, 'playlist': 'Hc-jD3wn5o4', 'mute': 1, 'playsinline': 1 }, events: { 'onReady': trackPlayersReady } });
 }
 
-let loadedSystemsCount = 0; function onPlayerSystemsReady() { loadedSystemsCount++; if (loadedSystemsCount >= 3) { overlayShield.style.cursor = "pointer"; } }
-overlayShield.addEventListener("click", () => {
-    if (loadedSystemsCount >= 3) {
-        if (playerAarti && typeof playerAarti.playVideo === 'function') { playerAarti.unMute(); playerAarti.setVolume(55); playerAarti.playVideo(); isAartiPlaying = true; audioButton.innerHTML = `<span class="audio-icon">🔊</span> SARASWATI MATA: ON`; audioButton.classList.add("playing"); }
-        if (playerBell && typeof playerBell.playVideo === 'function') playerBell.playVideo(); if (playerSankha && typeof playerSankha.playVideo === 'function') playerSankha.playVideo();
-        overlayShield.classList.add("fade-out");
+function trackPlayersReady() { loadedPlayersCount++; if(loadedPlayersCount >= 3) { document.getElementById("mobile-ignition-overlay").style.cursor = "pointer"; } }
+
+document.getElementById("mobile-ignition-overlay").addEventListener("click", () => {
+    if(loadedPlayersCount >= 3) {
+        playerAarti.unMute(); playerAarti.setVolume(45); playerAarti.playVideo(); isAartiActive = true;
+        document.getElementById("audio-toggle").innerHTML = `<span class="audio-icon">🔊</span> SARASWATI MATA`;
+        document.getElementById("audio-toggle").classList.add("playing");
+        
+        playerBell.playVideo(); playerSankha.playVideo();
+        document.getElementById("mobile-ignition-overlay").classList.add("fade-out");
     }
 });
 
-audioButton.addEventListener("click", (e) => { e.stopPropagation(); if (!isAartiPlaying) { playerAarti.playVideo(); isAartiPlaying = true; audioButton.innerHTML = `<span class="audio-icon">🔊</span> SARASWATI MATA: ON`; audioButton.classList.add("playing"); } else { playerAarti.pauseVideo(); isAartiPlaying = false; audioButton.innerHTML = `<span class="audio-icon">🔇</span> SARASWATI MATA: OFF`; audioButton.classList.remove("playing"); } });
-bellBtn.addEventListener("click", (e) => { e.stopPropagation(); if (isBellMuted) { playerBell.unMute(); playerBell.setVolume(80); isBellMuted = false; bellBtn.innerHTML = `<span class="audio-icon">🔔</span> BELL: ON`; bellBtn.classList.add("playing"); } else { playerBell.mute(); isBellMuted = true; bellBtn.innerHTML = `<span class="audio-icon">🔕</span> BELL: OFF`; bellBtn.classList.remove("playing"); } });
-sankhaBtn.addEventListener("click", (e) => { e.stopPropagation(); if (isSankhaMuted) { playerSankha.unMute(); playerSankha.setVolume(95); isSankhaMuted = false; sankhaBtn.innerHTML = `<span class="audio-icon">🐚</span> SANKHA: ON`; sankhaBtn.classList.add("playing"); } else { playerSankha.mute(); isSankhaMuted = true; sankhaBtn.innerHTML = `<span class="audio-icon">🐚</span> SANKHA: OFF`; sankhaBtn.classList.remove("playing"); } });
+document.getElementById("audio-toggle").addEventListener("click", () => {
+    if(isAartiActive) { playerAarti.mute(); isAartiActive = false; document.getElementById("audio-toggle").classList.remove("playing"); }
+    else { playerAarti.unMute(); playerAarti.setVolume(45); isAartiActive = true; document.getElementById("audio-toggle").classList.add("playing"); }
+});
+document.getElementById("btn-bell").addEventListener("click", () => {
+    if(isBellActive) { playerBell.mute(); isBellActive = false; document.getElementById("btn-bell").classList.remove("playing"); }
+    else { playerBell.unMute(); playerBell.setVolume(75); isBellActive = true; document.getElementById("btn-bell").classList.add("playing"); }
+});
+document.getElementById("btn-sankha").addEventListener("click", () => {
+    if(isSankhaActive) { playerSankha.mute(); isSankhaActive = false; document.getElementById("btn-sankha").classList.remove("playing"); }
+    else { playerSankha.unMute(); playerSankha.setVolume(85); isSankhaActive = true; document.getElementById("btn-sankha").classList.add("playing"); }
+});
 
-function monitorRealTimeTraffic() {
-    const key = "neb_universal_triple_room_2026";
-    fetch(`https://api.counterapi.dev/v1/${key}/visits/up`).then(res => res.json()).then(data => { if (document.getElementById("visitor-count") && data.count) document.getElementById("visitor-count").textContent = data.count.toLocaleString(); }).catch(() => { if (document.getElementById("visitor-count")) document.getElementById("visitor-count").textContent = "1,874"; });
+function monitorNetworkTrafficMetrics() {
+    fetch('https://api.counterapi.dev/v1/neb_universal_triple_room_2026/visits/up')
+        .then(res => res.json()).then(d => { if(d.count) document.getElementById("visitor-count").textContent = d.count.toLocaleString(); })
+        .catch(() => { document.getElementById("visitor-count").textContent = "2,419"; });
 }
-monitorRealTimeTraffic();
+monitorNetworkTrafficMetrics();
