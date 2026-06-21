@@ -2,200 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>NEB & SEE Academic Command Console</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSmart - Smart Learning Platform</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="video-ambient-frame">
-        <div id="youtube-player-aarti" class="mobile-safe-iframe"></div>
-        <div id="youtube-player-bell" class="mobile-safe-iframe"></div>
-        <div id="youtube-player-sankha" class="mobile-safe-iframe"></div>
-    </div>
-    
-    <div class="space-grid"></div>
-    <div class="nebula-cyan"></div>
-    <div class="nebula-purple"></div>
-
-    <div id="mobile-ignition-overlay" class="ignition-overlay">
-        <div class="ignition-content">
-            <div class="ignition-radar"></div>
-            <h2>INITIALIZE TRANSMISSION</h2>
-            <p>Syncing triple-matrix telemetry arrays, cross-device media nodes, and live traffic metrics.</p>
-            <button class="ignition-btn">CONNECT PORTAL ⚡</button>
+    <div class="auth-container">
+        <div id="signup-box">
+            <h2>Join EduSmart</h2>
+            <p class="subtitle">Your digital portal for SEE & NEB excellence</p>
+            <form id="signup-form">
+                <div class="input-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required placeholder="Your Name">
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email" id="signup-email" required placeholder="name@example.com">
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required placeholder="••••••••">
+                </div>
+                <div class="input-group">
+                    <label for="signup-level">Academic Level</label>
+                    <select id="signup-level" required>
+                        <option value="class10">Class 10 (SEE)</option>
+                        <option value="class12">Class 12 (NEB)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Create Free Account</button>
+            </form>
+            <p class="toggle-auth">Already have an account? <span onclick="toggleAuthForms()">Login</span></p>
         </div>
-    </div>
 
-    <div id="nav-drawer" class="nav-sidebar">
-        <div class="drawer-header">
-            <span class="drawer-logo">MISSION SELECT</span>
-            <button id="close-drawer-btn" class="drawer-close">&times;</button>
+        <div id="login-box" class="hidden">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Log in to resume your progress</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" required placeholder="name@example.com">
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn-submit">Sign In</button>
+            </form>
+            <p class="toggle-auth">Don't have an account? <span onclick="toggleAuthForms()">Sign Up</span></p>
         </div>
-        <nav class="drawer-menu">
-            <button class="menu-item active" data-target="neb-result">
-                <span class="menu-icon">📊</span> NEB RESULT 2083 COUNTDOWN
-            </button>
-            <button class="menu-item" data-target="see-exam">
-                <span class="menu-icon">📝</span> SEE EXAM 2083 COUNTDOWN
-            </button>
-            <button class="menu-item" data-target="neb-exam">
-                <span class="menu-icon">🚀</span> NEB EXAM 2084 COUNTDOWN
-            </button>
-        </nav>
-        <div class="drawer-footer">
-            <span>CORE TELEMETRY STATUS: NOMINAL</span>
-        </div>
-    </div>
-    <div id="drawer-overlay" class="sidebar-overlay-backing"></div>
-
-    <div class="app-container">
-        <header class="system-header">
-            <div class="left-header-block">
-                <button id="hamburger-menu-btn" class="hamburger-trigger" aria-label="Open Navigation Matrix">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                <div class="telemetry-status">
-                    <span class="radar-pulse"></span>
-                    <span id="active-system-tag" class="telemetry-text">SYSTEM: NEB RESULT MODULE</span>
-                </div>
-            </div>
-            
-            <div class="audio-terminal-console">
-                <button id="audio-toggle" class="audio-ctrl-btn">
-                    <span class="audio-icon">🔇</span> SARASWATI MATA: OFF
-                </button>
-                <button id="btn-bell" class="audio-ctrl-btn fx-btn">
-                    <span class="audio-icon">🔕</span> BELL: OFF
-                </button>
-                <button id="btn-sankha" class="audio-ctrl-btn fx-btn">
-                    <span class="audio-icon">🐚</span> SANKHA: OFF
-                </button>
-            </div>
-
-            <div class="live-clock-terminal">
-                <div class="calendar-badge greg">
-                    <span class="label">AD</span> <span id="current-date-greg">June 15, 2026</span>
-                </div>
-                <div class="calendar-badge nep">
-                    <span class="label">BS</span> <span id="current-date-nep">1 Ashar 2083</span>
-                </div>
-                <div id="digital-clock" class="clock-display">00:00:00</div>
-            </div>
-        </header>
-
-        <main class="dashboard">
-            <h1 id="dashboard-title" class="main-title">NEB Grade 12 Result 2026 Countdown</h1>
-            <p id="dashboard-subtitle" class="subtitle">Every second brings the result closer.</p>
-
-            <div class="target-matrix-card">
-                <div class="matrix-item">
-                    <span class="matrix-label">TARGET ARRIVAL (AD)</span>
-                    <span id="meta-ad" class="matrix-value text-cyan">June 24, 2026</span>
-                </div>
-                <div class="divider-vertical"></div>
-                <div class="matrix-item">
-                    <span class="matrix-label">TARGET ARRIVAL (BS)</span>
-                    <span id="meta-bs" class="matrix-value text-purple">10 Ashar 2083</span>
-                </div>
-                <div class="divider-vertical"></div>
-                <div class="matrix-item">
-                    <span class="matrix-label">T-MINUS METRIC</span>
-                    <span id="days-remaining-badge" class="matrix-value text-white">9 DAYS AWAY</span>
-                </div>
-            </div>
-
-            <div id="countdown-board" class="countdown-grid">
-                <div class="time-card">
-                    <span id="days" class="digit">00</span>
-                    <span class="unit">DAYS</span>
-                </div>
-                <div class="time-card">
-                    <span id="hours" class="digit">00</span>
-                    <span class="unit">HOURS</span>
-                </div>
-                <div class="time-card">
-                    <span id="minutes" class="digit">00</span>
-                    <span class="unit">MINUTES</span>
-                </div>
-                <div class="time-card">
-                    <span id="seconds" class="digit">00</span>
-                    <span class="unit">SECONDS</span>
-                </div>
-                <div class="time-card ms-card">
-                    <span id="milliseconds" class="digit ms-digit">000</span>
-                    <span class="unit text-purple">MS</span>
-                </div>
-            </div>
-
-            <div id="celebration-zone" class="celebration-box hidden">
-                <div class="confetti-cannon">✨ 🚀 ✨</div>
-                <h2 id="celebration-title">The waiting is over.</h2>
-                <p id="celebration-desc">Check your parameters now!</p>
-                <button class="re-sync-btn" onclick="window.location.reload()">Re-Verify Feed</button>
-            </div>
-
-            <div class="trajectory-panel">
-                <div class="panel-header">
-                    <span class="panel-title">MISSION TRAJECTORY WINDOW</span>
-                    <span id="progress-percentage" class="percentage-readout">0.0000%</span>
-                </div>
-                <div class="track-container">
-                    <div id="progress-fill-bar" class="fill-bar"></div>
-                </div>
-                <div class="track-footer">
-                    <div class="footer-node">
-                        <span id="trajectory-start-date" class="node-date">June 14, 2026</span>
-                        <span id="trajectory-start-label" class="node-label">31 Jestha 2083 (START)</span>
-                    </div>
-                    <div class="footer-node text-right">
-                        <span id="trajectory-target-date" class="node-date">June 24, 2026</span>
-                        <span id="trajectory-target-label" class="node-label">10 Ashar 2083 (TARGET)</span>
-                    </div>
-                </div>
-            </div>
-
-            <section id="gateway-routing-module" class="gateway-action-container">
-                <div class="portal-redirect-card">
-                    <div class="redirect-header">
-                        <span class="live-indicator"><span class="pulse-dot"></span> BROADCAST GATEWAY SECURE</span>
-                        <span id="portal-url-tag" class="portal-url-tag">neb.ntc.net.np</span>
-                    </div>
-                    <div class="redirect-body">
-                        <p id="redirect-instruction-text" class="redirect-instruction">
-                            Official board servers protect result modules using strict isolation protocols. To view metrics, verify symbol sheets, and securely process grade ledgers, establish a clean line by routing directly through the external portal interface node.
-                        </p>
-                        <a id="secure-launch-anchor" href="https://neb.ntc.net.np" target="_blank" rel="noopener noreferrer" class="secure-launchpad-btn">
-                            Launch External Gateway View ⚡
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="forecast-matrix-zone" class="forecast-matrix">
-                <h2 id="matrix-section-header" class="section-header">PREDICTION TIMELINE MATRIX</h2>
-                <div id="matrix-cards-wrapper" class="matrix-grid">
-                    </div>
-            </section>
-        </main>
-
-        <footer class="system-footer">
-            <div class="footer-telemetry-grid">
-                <p class="network-profile-text">NEB Space-Launch Telemetry Platform © 2026 // Distributed Network Profile</p>
-                
-                <div class="live-visitor-card">
-                    <span class="visitor-ping"></span>
-                    <span class="visitor-title">TOTAL REAL VISITORS:</span>
-                    <span id="visitor-count" class="visitor-digits">500</span>
-                    <span class="visitor-unit">HITS</span>
-                </div>
-            </div>
-        </footer>
     </div>
 
     <script src="script.js"></script>
